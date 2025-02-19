@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
-        tsserver = {}, -- TypeScript/JavaScript LSP
+        ts_ls = {}, -- TypeScript/JavaScript LSP
         eslint = {}, -- Linter untuk JS/TS
         html = {},
         cssls = {},

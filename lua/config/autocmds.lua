@@ -6,8 +6,9 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
--- Menambahkan autocommand untuk format file dengan Prettier saat file disimpan
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = { "*.js", "*.ts", "*.jsx", "*.tsx", "*.css", "*.html", "*.json" },
-  command = "Prettier",
+  pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.json", "*.css", "*.scss", "*.html", "*.md" },
+  callback = function()
+    vim.cmd("lua vim.lsp.buf.format()")
+  end,
 })
