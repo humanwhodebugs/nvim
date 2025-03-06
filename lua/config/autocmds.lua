@@ -1,15 +1,5 @@
 -- Auto commands (autocmds.lua)
 
--- Auto format on save
-local format_group = vim.api.nvim_create_augroup("AutoFormat", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = format_group,
-  pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.json", "*.css", "*.scss", "*.html", "*.md" },
-  callback = function()
-    vim.lsp.buf.format()
-  end,
-})
-
 -- Highlight text when on "yank" mode
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
@@ -18,8 +8,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- Auto reload config when there's change on .lua file
+-- Auto reload config hanya untuk nvim config folder
 vim.api.nvim_create_autocmd("BufWritePost", {
-  pattern = { "*.lua" },
+  pattern = { "~/.config/nvim/lua/*.lua" },
   command = "source <afile>",
+})
+
+-- Auto-trim trailing whitespace saat save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  command = [[%s/\s\+$//e]],
 })

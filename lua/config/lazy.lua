@@ -16,7 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", priority = 1000 },
     { import = "plugins" },
   },
   defaults = {
@@ -27,12 +27,13 @@ require("lazy").setup({
     enabled = false, -- Cek update plugin secara otomatis
   },
   change_detection = {
-    enabled = true, -- Auto detect perubahan di lazy-lock.json
-    notify = false, -- Tidak perlu notifikasi
+    enabled = true,
+    notify = false, -- Tidak perlu notifikasi saat ada perubahan
   },
   performance = {
     cache = {
-      enabled = true, -- Aktifkan cache agar loading lebih cepat
+      enabled = true,
+      gc = 100, -- Bersihkan memori lebih agresif
     },
     reset_packpath = true, -- Reset packpath agar lebih bersih
     rtp = {

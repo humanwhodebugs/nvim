@@ -18,6 +18,7 @@ vim.opt.termguicolors = true -- Enable 24-bit color support
 vim.opt.showmode = false -- Hide default mode display (handled by status bar)
 vim.opt.splitright = true -- Open vertical splits to the right
 vim.opt.splitbelow = true -- Open horizontal splits below
+vim.opt.cmdheight = 0 -- Hide command-line when not in use (NeoVim 0.8+)
 
 -- Searching
 vim.opt.ignorecase = true -- Case-insensitive searching
@@ -27,8 +28,13 @@ vim.opt.incsearch = true -- Show matches while typing
 -- Performance
 vim.opt.updatetime = 300 -- Faster completion (default is 4000ms)
 vim.opt.timeoutlen = 500 -- Faster key timeout
-vim.opt.lazyredraw = false -- Faster UI updates if value is true
+vim.opt.lazyredraw = false -- Improve UI responsiveness
 vim.opt.ttyfast = true -- Faster rendering
+
+-- Folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false -- Don't auto-fold files on open
 
 -- Backup & Swap (Disable for better performance)
 vim.opt.swapfile = false
@@ -45,6 +51,9 @@ vim.opt.autoread = true -- Auto reload files if changed externally
 
 -- File Encoding
 vim.opt.fileencoding = "utf-8" -- Default encoding
+
+-- Completion Optimizations
+vim.opt.completeopt = { "menuone", "noselect" }
 
 -- Diagnostic UI (LSP)
 vim.diagnostic.config({

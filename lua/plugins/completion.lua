@@ -2,9 +2,12 @@ return {
   {
     "hrsh7th/nvim-cmp",
     opts = function(_, opts)
-      table.insert(opts.sources, { name = "luasnip" })
-      table.insert(opts.sources, { name = "nvim_lsp" })
-      table.insert(opts.sources, { name = "tailwindcss" })
+      opts.sources = opts.sources or {}
+      vim.list_extend(opts.sources, {
+        { name = "nvim_lsp" },
+        { name = "tailwindcss" },
+        { name = "path" },
+      })
     end,
   },
 }

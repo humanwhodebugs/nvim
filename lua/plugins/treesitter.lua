@@ -5,6 +5,7 @@ return {
     opts = {
       ensure_installed = { "javascript", "typescript", "html", "css", "json", "tsx", "lua" },
       highlight = { enable = true },
+      indent = { enable = true },
     },
   },
 }
