@@ -1,14 +1,25 @@
--- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
---
--- Add any additional autocmds here
--- with `vim.api.nvim_create_autocmd`
---
--- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
--- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- Auto commands (autocmds.lua)
+
+-- Auto format on save
+local format_group = vim.api.nvim_create_augroup("AutoFormat", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
+  group = format_group,
   pattern = { "*.js", "*.jsx", "*.ts", "*.tsx", "*.json", "*.css", "*.scss", "*.html", "*.md" },
   callback = function()
-    vim.cmd("lua vim.lsp.buf.format()")
+    vim.lsp.buf.format()
   end,
+})
+
+-- Highlight text when on "yank" mode
+vim.api.nvim_create_autocmd("TextYankPost", {
+  pattern = "*",
+  callback = function()
+    vim.highlight.on_yank({ timeout = 200 })
+  end,
+})
+
+-- Auto reload config when there's change on .lua file
+vim.api.nvim_create_autocmd("BufWritePost", {
+  pattern = { "*.lua" },
+  command = "source <afile>",
 })

@@ -4,7 +4,7 @@ return {
     opts = {
       dashboard = {
         preset = {
-          header = [[
+          --[[
 ⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷
 ⡆⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑⢝⣇
 ⡆⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐⢕⢽
@@ -19,11 +19,21 @@ return {
 ⡕⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿⠁⣠
 ⡝⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀⣈⠙
 ⡝⡵⡕⡀⠑⠳⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠛⢉⡠⡲⡫⡪⡪⡣
+]]
+          header = [[
+⠀⠀⠀⠀⠀⠀⠀⣠⠔⠒⣢⠔⠒⠂⠁⠒⠒⠒⠤⡀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⠔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠀⠀⠙⢢⠀⠀⠀⠀⠀⠀
+⠀⢀⣀⠤⠂⠁⢠⠀⢠⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠣⡀⠀⠀⠀⠀
+⢰⠉⠀⠀⠀⠀⡇⢀⡘⠛⠀⢀⢀⠀⡀⠀⠀⢺⣿⠀⠰⡀⠀⠀⠀⠑⢄⡀⠀⠀
+⠸⡀⠀⠀⠀⠀⠘⣮⡚⠀⠀⠀⠀⠈⠁⠀⠀⠀⣒⣤⢦⢣⡀⠀⠀⠀⠀⠈⠑⡄
+⠀⠈⠑⠒⠒⠒⠉⠀⠀⠉⢁⠶⠒⠒⠀⠤⠤⠤⢤⡄⠓⠃⠳⣄⠀⠀⠀⠀⠀⡘
+⠀⠀⠀⠀⠀⠀⠘⠚⠀⢀⣧⡤⠖⠀⠀⠀⢀⠖⠉⠉⠓⢄⠀⠈⠑⠢⠤⠄⠊⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢇⠀⠇⠀⠀⠀⠀⣇⠀⢠⡊⠰⠈⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠢⠐⠠⠤⢀⣀⣘⠦⠤⠠⠜⠊⠀⠀⠀⠀⠀⠀⠀⠀
 ]],
         -- stylua: ignore
         ---@type snacks.dashboard.Item[]
         keys = {
-          { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
           { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
           { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
           { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
