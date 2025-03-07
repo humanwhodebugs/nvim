@@ -19,10 +19,10 @@ return {
             { icon = " ", key = "c", desc = "Config", action = ":e $MYVIMRC" },
             { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
             {
-              icon = " ",
-              key = "r",
-              desc = "Recent Files",
-              action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.getcwd()})",
+              icon = "󰙅 ", -- Icon untuk Neo-Tree
+              key = "n",
+              desc = "Neo-Tree",
+              action = ":Neotree toggle",
             },
             { icon = " ", key = "q", desc = "Quit", action = ":qa" },
           },
