@@ -1,82 +1,51 @@
--- OPTIONS & SETTINGS
-
--- Indentation
-vim.opt.tabstop = 2 -- 1 tab = 2 spaces
-vim.opt.shiftwidth = 2 -- Indentation width
-vim.opt.expandtab = true -- Convert tabs to spaces
-vim.opt.smartindent = true -- Smart auto-indentation
+-- General Settings
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
 -- UI Enhancements
 vim.opt.number = true -- Show line numbers
-vim.opt.relativenumber = true -- Relative line numbers for easy movement
-vim.opt.wrap = true -- Enable word wrap
-vim.opt.scrolloff = 8 -- Keep cursor centered with 8 lines above/below
-vim.opt.sidescrolloff = 8 -- Keep cursor centered horizontally
+vim.opt.relativenumber = true -- Show relative line numbers
 vim.opt.cursorline = true -- Highlight the current line
-vim.opt.signcolumn = "yes" -- Always show sign column
-vim.opt.termguicolors = true -- Enable 24-bit color support
-vim.opt.showmode = false -- Hide default mode display (handled by status bar)
-vim.opt.splitright = true -- Open vertical splits to the right
-vim.opt.splitbelow = true -- Open horizontal splits below
-vim.opt.cmdheight = 0 -- Hide command-line when not in use (NeoVim 0.8+)
+vim.opt.termguicolors = true -- Enable 24-bit colors
+vim.opt.scrolloff = 4 -- Keep at least 4 lines above/below cursor
+vim.opt.sidescrolloff = 4 -- Keep at least 4 columns left/right of cursor
 
--- Searching
-vim.opt.ignorecase = true -- Case-insensitive searching
-vim.opt.smartcase = true -- Case-sensitive if uppercase letters are used
-vim.opt.incsearch = true -- Show matches while typing
+-- Performance Tweaks
+vim.opt.updatetime = 300 -- Faster UI response
+vim.opt.timeoutlen = 500 -- Reduce time waiting for key sequences
+vim.opt.lazyredraw = false -- Prevent unnecessary redraws
+vim.opt.redrawtime = 1000 -- Improve performance when opening large files
 
--- Performance
-vim.opt.updatetime = 300 -- Faster completion (default is 4000ms)
-vim.opt.timeoutlen = 500 -- Faster key timeout
-vim.opt.lazyredraw = false -- Improve UI responsiveness
-vim.opt.ttyfast = true -- Faster rendering
+-- Search Settings
+vim.opt.hlsearch = true -- Highlight search results
+vim.opt.incsearch = true -- Incremental search
+vim.opt.ignorecase = true -- Ignore case when searching
+vim.opt.smartcase = true -- Enable smart case search
 
--- Folding
-vim.opt.foldmethod = "expr"
+-- Indentation & Formatting
+vim.opt.tabstop = 2 -- 1 tab = 2 spaces
+vim.opt.shiftwidth = 2 -- Indent level = 2 spaces
+vim.opt.expandtab = true -- Convert tabs to spaces
+vim.opt.smartindent = true -- Enable smart indentation
+
+-- Folding Settings
+vim.opt.foldmethod = "expr" -- Use Treesitter for folding
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldenable = false -- Don't auto-fold files on open
+vim.opt.foldenable = false -- Start with folds open
 
--- Backup & Swap (Disable for better performance)
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undofile = true -- Persistent undo
-
--- Clipboard & Mouse Support
+-- Clipboard & Mouse
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
 vim.opt.mouse = "a" -- Enable mouse support in all modes
 
--- Terminal Behavior (For my i3)
-vim.opt.hidden = true -- Allow switching buffers without saving
-vim.opt.autoread = true -- Auto reload files if changed externally
+-- File & Backup Settings
+vim.opt.swapfile = false -- Disable swap file
+vim.opt.backup = false -- Disable backup file
+vim.opt.undofile = true -- Enable undo history
 
--- File Encoding
-vim.opt.fileencoding = "utf-8" -- Default encoding
-
--- Completion Optimizations
-vim.opt.completeopt = { "menuone", "noselect" }
-
--- Diagnostic UI (LSP)
+-- LSP & Diagnostics
 vim.diagnostic.config({
-  virtual_text = true, -- Show inline errors
-  signs = true, -- Show signs in sign column
-  update_in_insert = false,
-  float = { border = "rounded" }, -- Use rounded borders for floating diagnostics
+  virtual_text = false, -- Disable inline virtual text
+  signs = true, -- Enable diagnostic signs
+  update_in_insert = false, -- Don't update diagnostics while typing
+  float = { border = "rounded" }, -- Use rounded borders for floating windows
 })
-
--- Extra: Improve JSON & JavaScript/TypeScript Experience
-vim.g.markdown_fenced_languages = { "javascript", "typescript", "json" }
-
--- Extra: Disable certain built-in plugins for faster startup
-local disabled_built_ins = {
-  "gzip",
-  "matchit",
-  "matchparen",
-  "netrwPlugin",
-  "tarPlugin",
-  "tohtml",
-  "tutor",
-  "zipPlugin",
-}
-for _, plugin in pairs(disabled_built_ins) do
-  vim.g["loaded_" .. plugin] = 1
-end
