@@ -1,3 +1,9 @@
+-- Auto load toggleterm when entering a buffer
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
+  command = "lua pcall(require, 'toggleterm')",
+})
+
 -- Highlight text when yanking (copying)
 vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
