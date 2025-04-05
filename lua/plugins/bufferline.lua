@@ -1,5 +1,6 @@
 return {
   "akinsho/bufferline.nvim",
+  event = "VeryLazy", -- Enabling Lazy Load
   dependencies = { "nvim-tree/nvim-web-devicons", "catppuccin/nvim" },
   opts = function(_, opts)
     -- Apply Catppuccin theme highlights only if the colorscheme is set to "catppuccin"
