@@ -7,18 +7,19 @@ return {
       preset = {
         -- ASCII art for the dashboard header
         header = [[
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣴⠾⠛⠋⠉⠁⠀⠀⠈⠉⠉⠛⠳⢦⣄⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⢀⣶⠿⢉⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⢿⡉⠹⣷⡀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢀⡾⠋⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠁⠀⠈⢻⣆⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⢀⣾⠁⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⢻⡄⠀⠀⠀⠀
-⠀⠀⠀⢀⡾⠃⢰⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣧⠈⢿⣄⠀⠀⠀
-⠀⠀⣠⡟⠁⠀⣿⠁⠀⠘⣟⠛⠛⣿⠛⠀⠀⠀⠀⠀⠀⠀⠀⠘⣟⠛⢋⡟⠇⠀⠀⣿⡄⠀⠻⣦⡀⠀
-⠀⣸⠏⠀⠀⠀⢿⡄⠂⠀⣿⠀⠀⢹⠃⠀⣿⣠⡴⠦⣤⣻⠆⢠⡇⠀⣸⠃⠀⠀⠀⣿⠀⠀⠀⠘⣷⠀
-⢀⣿⠀⠀⠀⠀⠈⢿⣤⡀⣿⠀⠀⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⠇⠀⢸⠇⠀⣠⡾⠃⠀⠀⠀⠀⢹⡇
-⠈⣿⠀⠀⠀⠀⠀⠀⠈⢿⣷⣷⣆⣹⣄⣀⣀⣀⣀⣀⣀⣀⣇⣀⣸⣇⣶⣿⡿⠉⠀⠀⠀⠀⠀⠀⢸⡇
-⠀⠹⣦⡀⠀⠀⠀⢀⣠⡾⠃⠀⠉⠉⠉⠉⠉⠉⠉⠉⠙⠉⠉⠉⠉⠉⠀⠈⠻⣦⣀⠀⠀⠀⢀⣠⡟⠀
-⠀⠀⠈⠙⠛⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠛⠛⠛⠛⠉⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⡴⢾⣶⣴⠚⣫⠏⠉⠉⠛⠛⢭⡓⢶⣶⠶⣦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⣰⠋⡀⣠⠟⢁⣾⠇⠀⣀⣷⠀⠀⠓⣝⠂⠙⣆⢄⢻⡞⢢⠀⠀⠀
+⠀⠀⠀⠀⢠⡇⢸⢡⠃⢠⡞⠁⠀⣰⡟⠉⢦⣄⠀⠈⢆⠀⢻⣾⡄⢧⢸⠀⠀⠀
+⠀⠀⠀⠀⢸⠀⡇⡌⠀⡞⠀⢀⣴⡋⠀⠀⠀⣙⣷⡀⠘⡄⠘⣿⣧⢸⣼⣥⠀⠀
+⣀⣀⣀⣀⣞⣰⠁⡇⠀⣧⢴⡛⠛⠁⠀⠀⠀⠉⠉⡙⡦⡇⠀⣿⣸⣼⣿⣇⣀⣀
+⠳⢽⣷⠺⡟⡿⣯⡇⠰⣧⢩⣭⣥⠀⠀⠀⠀⢠⣭⣥⠁⡀⠀⣿⡟⣴⠶⢁⡨⠊
+⠀⠀⠉⢳⢦⣅⠘⣿⣄⢿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡇⢀⣏⣳⡇⢴⡞⠁⠀
+⠀⠀⠀⣼⢸⡅⢹⣿⣿⣾⣟⠀⠀⠠⣀⢄⡠⠀⠀⠠⡚⣿⡿⣿⢻⠁⢹⣷⡀⠀
+⠀⠀⠸⡏⠸⡇⢼⣿⡿⠟⠛⠓⣦⣄⣀⣀⣀⣀⡤⠴⠿⢿⡟⠛⠺⣦⣬⣗⠀⠀
+⠀⠀⢰⡇⠀⡇⠸⡏⠀⠀⢰⠋⠙⠛⠛⠉⠉⢹⠀⠀⠀⠀⡇⠀⠀⣿⣿⣿⣟⡃
+⠀⡐⣾⠀⡀⢹⠀⣿⣄⠀⢸⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⢠⣇⠀⠀⣿⣿⣿⣛⡃
+⠀⣾⣿⠀⡇⠘⡄⢸⣿⠆⠈⡇⠀⠀⠀⠀⠈⢉⠃⠀⣰⡾⠻⠃⢰⣿⣿⣛⡋⠀
+⠀⣿⣿⡆⢷⠀⢧⠈⣿⠤⠤⣇⠀⠀⠀⠀⢀⣸⣠⢾⠟⠓⡶⢤⣾⣿⣿⣟⣓⠀
 ]],
 
         -- Define key bindings for the dashboard
@@ -38,8 +39,14 @@ return {
           {
             icon = "󰙅 ", -- Icon representing Neo-tree file explorer
             key = "n",
-            desc = "文件资源管理器", -- File Explorer (Neo-tree)
+            desc = "文件管理器", -- File Explorer (Neo-tree)
             action = ":Neotree toggle", -- Toggle Neo-tree file explorer
+          },
+          {
+            icon = " ", -- Icon representing recent files
+            key = "r",
+            desc = "最近文件", -- Recent Files
+            action = ":lua Snacks.dashboard.pick('oldfiles')",
           },
           {
             icon = " ", -- Icon representing quit action
@@ -52,7 +59,8 @@ return {
 
       -- Define the layout of sections on the dashboard
       sections = {
-        { section = "header" }, -- Display the ASCII header at the top
+        { section = "header", align = "center" }, -- Display the ASCII header at the top
+        -- { section = "projects", padding = 1 }, -- Display projects with spacing
         { section = "keys", gap = 1, padding = 1 }, -- Display key bindings with spacing
         { title = "没有人还能记起白日的痛楚", align = "center" }, -- Display a centered title
       },
