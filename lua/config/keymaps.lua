@@ -6,3 +6,7 @@ vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { de
 
 -- Exit insert mode on Terminal
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>r", function()
+  vim.cmd("lua Snacks.dashboard.pick('oldfiles')")
+end, { desc = "Telesteroid" })

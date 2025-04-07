@@ -14,7 +14,7 @@ return {
     close_on_exit = true,
     shell = "/bin/zsh",
     float_opts = {
-      border = "rounded",
+      border = "single",
       winblend = 0,
     },
   },

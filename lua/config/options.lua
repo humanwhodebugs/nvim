@@ -49,3 +49,9 @@ vim.diagnostic.config({
   update_in_insert = false, -- Don't update diagnostics while typing
   float = { border = "rounded" }, -- Use rounded borders for floating windows
 })
+
+require("noice").setup({
+  cmdline = {
+    view = "cmdline",
+  },
+})

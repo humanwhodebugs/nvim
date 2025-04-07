@@ -35,6 +35,9 @@ return {
         "css-lsp", -- CSS LSP
         "tailwindcss-language-server", -- Tailwind LSP
       },
+      ui = {
+        border = "single",
+      },
     },
   },
 

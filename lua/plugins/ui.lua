@@ -60,9 +60,60 @@ return {
       -- Define the layout of sections on the dashboard
       sections = {
         { section = "header", align = "center" }, -- Display the ASCII header at the top
-        -- { section = "projects", padding = 1 }, -- Display projects with spacing
         { section = "keys", gap = 1, padding = 1 }, -- Display key bindings with spacing
         { title = "没有人还能记起白日的痛楚", align = "center" }, -- Display a centered title
+      },
+    },
+
+    -- Notification settings
+    notifier = { enabled = true, timeout = 3000 },
+
+    -- Picker layout configuration
+    picker = {
+      layout = {
+        layout = {
+          box = "horizontal",
+          width = 0.8,
+          min_width = 120,
+          height = 0.8,
+          {
+            box = "vertical",
+            border = "single",
+            title = "{title} {live} {flags}",
+            { win = "input", height = 1, border = "bottom" },
+            { win = "list", border = "none" },
+          },
+          { win = "preview", title = "{preview}", border = "single", width = 0.5 },
+        },
+      },
+    },
+
+    -- UI styles for notifications
+    styles = {
+      notification = {
+        border = "single",
+        zindex = 100,
+        ft = "markdown",
+        wo = {
+          winblend = 5,
+          wrap = false,
+          conceallevel = 2,
+          colorcolumn = "",
+        },
+        bo = { filetype = "snacks_notif" },
+      },
+      notification_history = {
+        border = "single",
+        zindex = 100,
+        width = 0.6,
+        height = 0.6,
+        minimal = false,
+        title = " Notification History ",
+        title_pos = "center",
+        ft = "markdown",
+        bo = { filetype = "snacks_notif_history", modifiable = false },
+        wo = { winhighlight = "Normal:SnacksNotifierHistory" },
+        keys = { q = "close" },
       },
     },
   },

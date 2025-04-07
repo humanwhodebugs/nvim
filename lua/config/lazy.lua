@@ -62,7 +62,7 @@ require("lazy").setup({
     },
   },
   ui = {
-    border = "rounded", -- Use rounded borders for a cleaner UI
+    border = "single", -- Use rounded borders for a cleaner UI
     title = " Lazy Plugin Manager ", -- Custom title for the UI
   },
   debug = false, -- Disable debugging for better performance
