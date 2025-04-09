@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { de
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- Remap 'jk' to Escape in Insert Mode for faster exit
-vim.api.nvim_set_keymap("i", "jj", "<Esc>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 -- Telescope (Snacks): Open recent files with enhanced UI
 vim.keymap.set("n", "<leader>r", function()
