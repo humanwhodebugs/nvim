@@ -41,7 +41,7 @@ vim.keymap.set("v", "<Left>", "<NOP>", { noremap = true, silent = true })
 vim.keymap.set("v", "<Right>", "<NOP>", { noremap = true, silent = true })
 
 -- Disable arrow keys in Terminal mode
-vim.keymap.set("t", "<Up>", "<NOP>", { noremap = true, silent = true })
-vim.keymap.set("t", "<Down>", "<NOP>", { noremap = true, silent = true })
-vim.keymap.set("t", "<Left>", "<NOP>", { noremap = true, silent = true })
-vim.keymap.set("t", "<Right>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("t", "<Up>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("t", "<Down>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("t", "<Left>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("t", "<Right>", "<NOP>", { noremap = true, silent = true })

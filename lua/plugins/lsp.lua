@@ -18,6 +18,23 @@ return {
         tailwindcss = {
           filetypes = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact" },
         },
+
+        -- LSP for Lua (Love 2D)
+        lua_ls = {
+          settings = {
+            Lua = {
+              workspace = {
+                checkThirdParty = false,
+              },
+              diagnostics = {
+                globals = { "vim", "love" },
+              },
+              telemetry = {
+                enable = false,
+              },
+            },
+          },
+        },
       },
     },
   },
