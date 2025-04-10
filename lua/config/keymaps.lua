@@ -16,7 +16,7 @@ end, { desc = "Telescope (Snacks)" })
 
 -- Prevent 'x' and 'd' from copying deleted text to the default register
 vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true }) -- Delete a single character without storing it
-vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true }) -- Delete text without saving it to the register
+-- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true }) -- Delete text without saving it to the register
 vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true }) -- Delete text in Visual mode without saving it
 
 -- Disable escape key in Insert mode
@@ -29,10 +29,10 @@ vim.keymap.set("n", "<Left>", "<NOP>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Right>", "<NOP>", { noremap = true, silent = true })
 
 -- Disable arrow keys in Insert mode
-vim.keymap.set("i", "<Up>", "<NOP>", { noremap = true, silent = true })
-vim.keymap.set("i", "<Down>", "<NOP>", { noremap = true, silent = true })
-vim.keymap.set("i", "<Left>", "<NOP>", { noremap = true, silent = true })
-vim.keymap.set("i", "<Right>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("i", "<Up>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("i", "<Down>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("i", "<Left>", "<NOP>", { noremap = true, silent = true })
+-- vim.keymap.set("i", "<Right>", "<NOP>", { noremap = true, silent = true })
 
 -- Disable arrow keys in Visual mode
 vim.keymap.set("v", "<Up>", "<NOP>", { noremap = true, silent = true })
