@@ -39,13 +39,13 @@ return {
           },
         },
 
-        ghost_text = {
-          enabled = true, -- Enables ghost text feature.
-          show_with_selection = true, -- Displays ghost text when an item is selected.
-          show_without_selection = false, -- Hides ghost text when no item is selected.
-          show_with_menu = true, -- Shows ghost text when the completion menu is open.
-          show_without_menu = true, -- Shows ghost text even when the menu is closed.
-        },
+        -- ghost_text = {
+        --   enabled = true, -- Enables ghost text feature.
+        --   show_with_selection = true, -- Displays ghost text when an item is selected.
+        --   show_without_selection = false, -- Hides ghost text when no item is selected.
+        --   show_with_menu = true, -- Shows ghost text when the completion menu is open.
+        --   show_without_menu = true, -- Shows ghost text even when the menu is closed.
+        -- },
       },
     })
   end,
