@@ -24,10 +24,10 @@ return {
 
       offsets = {
         {
-          filetype = "NvimTree",
+          filetype = "neo-tree",
           text = "File Explorer",
           highlight = "Directory",
-          text_align = "left",
+          text_align = "center",
         },
       },
     }

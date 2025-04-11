@@ -27,5 +27,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- Set border color for floating windows
 vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#f5c2e7", bg = "NONE" }) -- Pink
 
+-- Set border color for Normal
+vim.api.nvim_set_hl(0, "Normal", { fg = "#f5c2e7", bg = "NONE" }) -- Pink
+
 -- Set separator color for window splits
 vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#f5c2e7" }) -- Pink
