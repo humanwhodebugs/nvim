@@ -17,7 +17,7 @@ end, { desc = "Telescope (Snacks)" })
 -- Prevent 'x' and 'd' from copying deleted text to the default register
 vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true }) -- Delete a single character without storing it
 -- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true }) -- Delete text without saving it to the register
-vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true }) -- Delete text in Visual mode without saving it
+-- vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true }) -- Delete text in Visual mode without saving it
 
 -- Disable escape key in Insert mode
 vim.keymap.set("i", "<Esc>", "<NOP>", { noremap = true, silent = true })

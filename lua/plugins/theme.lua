@@ -36,11 +36,10 @@ return {
         operators = {}, -- No specific style for operators
       },
       integrations = { -- Enable integration with various plugins
+        bufferline = true, -- Enable integration with Bufferline
         cmp = true, -- Enable integration with nvim-cmp (completion plugin)
         gitsigns = true, -- Enable integration with Git signs
         neotree = true, -- Enable integration with Neo-tree
-        bufferline = true, -- Enable integration with Bufferline
-        nvimtree = true, -- Enable integration with NvimTree
         treesitter = true, -- Enable integration with Treesitter
         notify = false, -- Disable integration with notify.nvim
         snacks = {
@@ -48,6 +47,14 @@ return {
           indentscope_color = "pink", -- Set the indent scope color to pink
         },
       },
+
+      custom_highlights = function()
+        return {
+          NeoTreeWinSeparator = { fg = "#f5c2e7" }, -- Set separator color for Neo-tree
+          FloatBorder = { fg = "#f5c2e7" }, -- Set border color for floating windows
+          WinSeparator = { fg = "#f5c2e7" }, -- Set separator color between windows
+        }
+      end,
     },
   },
   {

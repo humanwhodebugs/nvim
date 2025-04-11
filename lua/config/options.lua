@@ -47,11 +47,12 @@ vim.diagnostic.config({
   virtual_text = false, -- Disable inline virtual text
   signs = true, -- Enable diagnostic signs
   update_in_insert = false, -- Don't update diagnostics while typing
-  float = { border = "rounded" }, -- Use rounded borders for floating windows
+  float = { border = "single" }, -- Use rounded borders for floating windows
 })
 
+-- Noice Plugin Configuration
 require("noice").setup({
   cmdline = {
-    view = "cmdline",
+    view = "cmdline", -- Use a dedicated command-line view for better visibility
   },
 })

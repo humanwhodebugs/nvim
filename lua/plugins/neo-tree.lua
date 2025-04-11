@@ -1,7 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
-    close_if_last_window = false, -- Close Neo-tree if it's the only open window
+    close_if_last_window = true, -- Close Neo-tree if it's the only open window
     popup_border_style = "single", -- Border style for pop-ups
     enable_git_status = true, -- Show Git status
     enable_diagnostics = true, -- Show diagnostics (errors/warnings from LSP)
@@ -10,7 +10,18 @@ return {
         enabled = true, -- Neo-tree follows the currently opened file
       },
       use_libuv_file_watcher = true, -- Auto-refresh when files change
-      leave_dirs_open = false,
+    },
+
+    event_handlers = {
+      {
+        event = "file_open_requested",
+        handler = function()
+          -- auto close
+          -- vim.cmd("Neotree close")
+          -- OR
+          require("neo-tree.command").execute({ action = "close" })
+        end,
+      },
     },
 
     window = {
