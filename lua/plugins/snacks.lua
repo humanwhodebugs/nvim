@@ -90,23 +90,6 @@ return {
       },
     },
 
-    -- Status Column configuration
-    statuscolumn = {
-      {
-        left = { "mark", "sign" }, -- Priority of signs on the left (high to low)
-        right = { "fold", "git" }, -- Priority of signs on the right (high to low)
-        folds = {
-          open = false, -- Show open fold icons
-          git_hl = false, -- Use Git Signs highlight group for fold icons
-        },
-        git = {
-          -- Patterns to match Git signs
-          patterns = { "GitSign", "MiniDiffSign" },
-        },
-        refresh = 50, -- Refresh at most every 50ms
-      },
-    },
-
     -- Notification settings
     notifier = { enabled = true, timeout = 3000, style = "fancy" },
 

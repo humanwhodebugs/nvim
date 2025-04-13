@@ -37,6 +37,7 @@ return {
       },
       integrations = { -- Enable integration with various plugins
         bufferline = true, -- Enable integration with Bufferline
+        gitsigns = true, -- Enable integration with gitsigns
         mason = true, -- Enable integration with Mason
         neotree = true, -- Enable integration with Neo-tree
         treesitter = true, -- Enable integration with Treesitter
