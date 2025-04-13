@@ -1,25 +1,19 @@
--- Auto-load the `toggleterm` plugin when entering a buffer with specific file types
--- vim.api.nvim_create_autocmd("BufEnter", {
---   pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
---   command = "lua pcall(require, 'toggleterm')", -- Use `pcall` to prevent errors if `toggleterm` is not installed
--- })
-
 -- Highlight text when yanking (copying) to provide visual feedback
-vim.api.nvim_create_autocmd("TextYankPost", {
-	pattern = "*",
-	callback = function()
-		vim.highlight.on_yank({ timeout = 150 }) -- Reduced timeout for better responsiveness
-	end,
-})
+vim.api.nvim_create_autocmd("TextYankPost", { -- Create an autocmd that triggers after text is yanked
+  pattern = "*", -- Apply to all files
+  callback = function() -- Define the callback function to execute
+    vim.highlight.on_yank({ timeout = 150 }) -- Highlight yanked text with a short timeout (150ms)
+  end, -- End of callback function
+}) -- End of autocmd definition for TextYankPost
 
 -- Automatically reload Neovim config when saving files inside the config directory
-vim.api.nvim_create_autocmd("BufWritePost", {
-	pattern = vim.fn.expand("~") .. "/.config/nvim/lua/*.lua", -- Use `expand` for better path handling
-	command = "source <afile>", -- Reloads the config file after saving
-})
+vim.api.nvim_create_autocmd("BufWritePost", { -- Create an autocmd that triggers after a file is written
+  pattern = vim.fn.expand("~") .. "/.config/nvim/lua/*.lua", -- Match all Lua files in Neovim config directory
+  command = "source <afile>", -- Reload the modified config file automatically
+}) -- End of autocmd definition for BufWritePost
 
 -- Automatically trim trailing whitespace before saving a file
-vim.api.nvim_create_autocmd("BufWritePre", {
-	pattern = "*",
-	command = [[silent! %s/\s\+$//e]], -- Added `silent!` to suppress errors in read-only files
-})
+vim.api.nvim_create_autocmd("BufWritePre", { -- Create an autocmd that triggers before writing a buffer
+  pattern = "*", -- Apply to all files
+  command = [[silent! %s/\s\+$//e]], -- Remove trailing whitespace silently, ignoring errors
+}) -- End of autocmd definition for BufWritePre

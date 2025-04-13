@@ -1,51 +1,49 @@
 return {
-	"Saghen/blink.cmp",
-	version = "*",
-	event = { "BufReadPost", "BufNewFile" },
-	opts = {
-		completion = {
-			menu = {
-				border = "single", -- Defines the border style for the completion menu.
-				-- Configures highlights for various UI elements in the completion menu.
-				winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
-			},
+  "Saghen/blink.cmp",
+  version = "*", -- Always use the latest version
+  event = { "BufReadPost", "BufNewFile" }, -- Load plugin when opening or creating a file
+  opts = {
+    completion = {
+      menu = {
+        border = "single", -- Defines the border style for the completion menu
+        winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None", -- Highlighting settings for the menu
+      },
 
-			documentation = {
-				auto_show = true, -- Automatically displays documentation when selecting an item.
-				window = {
-					border = "single", -- Sets the border style for the hover documentation window.
-					scrollbar = false, -- Disables scrollbar in the documentation window.
-					-- Defines highlights for the documentation window.
-					winhighlight = "Normal:BlinkCmpDoc,FloatBorder:FloatBorder,EndOfBuffer:FloatBorder",
-				},
-			},
+      documentation = {
+        auto_show = true, -- Automatically show documentation on item selection
+        window = {
+          border = "single", -- Border style for documentation popup
+          scrollbar = false, -- Hide scrollbar in documentation
+          winhighlight = "Normal:BlinkCmpDoc,FloatBorder:FloatBorder,EndOfBuffer:FloatBorder", -- Highlighting settings for the documentation window
+        },
+      },
 
-			list = {
-				max_items = 8, -- Limits the number of visible completion items.
+      list = {
+        max_items = 8, -- Maximum number of completion items shown
 
-				selection = {
-					preselect = true, -- Preselects the first item in the completion menu.
-					-- To disable preselection for Markdown files, use:
-					-- preselect = function(ctx) return vim.bo.filetype ~= 'markdown' end,
+        selection = {
+          preselect = true, -- Automatically preselect the first item
+          -- To disable preselect for markdown files:
+          -- preselect = function(ctx) return vim.bo.filetype ~= 'markdown' end,
 
-					auto_insert = true, -- Inserts the selected item into the buffer automatically.
-					-- To disable auto-insert for Markdown files, use:
-					-- auto_insert = function(ctx) return vim.bo.filetype ~= 'markdown' end,
-				},
+          auto_insert = true, -- Automatically insert the selected item
+          -- To disable auto insert for markdown files:
+          -- auto_insert = function(ctx) return vim.bo.filetype ~= 'markdown' end,
+        },
 
-				cycle = {
-					from_bottom = true, -- Allows cycling back to the top when reaching the last item.
-					from_top = true, -- Allows cycling to the bottom when reaching the first item.
-				},
-			},
+        cycle = {
+          from_bottom = true, -- Cycle to top after last item
+          from_top = true, -- Cycle to bottom after first item
+        },
+      },
 
-			-- ghost_text = {
-			--   enabled = true, -- Enables ghost text feature.
-			--   show_with_selection = true, -- Displays ghost text when an item is selected.
-			--   show_without_selection = false, -- Hides ghost text when no item is selected.
-			--   show_with_menu = true, -- Shows ghost text when the completion menu is open.
-			--   show_without_menu = true, -- Shows ghost text even when the menu is closed.
-			-- },
-		},
-	},
+      -- ghost_text = {
+      --   enabled = true, -- Enable ghost text suggestions
+      --   show_with_selection = true, -- Show ghost text when an item is selected
+      --   show_without_selection = false, -- Hide ghost text if nothing is selected
+      --   show_with_menu = true, -- Show ghost text when completion menu is visible
+      --   show_without_menu = true, -- Show ghost text even if menu is not visible
+      -- },
+    },
+  },
 }
