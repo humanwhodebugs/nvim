@@ -17,3 +17,11 @@ vim.api.nvim_create_autocmd("BufWritePre", { -- Create an autocmd that triggers 
   pattern = "*", -- Apply to all files
   command = [[silent! %s/\s\+$//e]], -- Remove trailing whitespace silently, ignoring errors
 }) -- End of autocmd definition for BufWritePre
+
+-- LSP & Diagnostics
+vim.diagnostic.config({
+  virtual_text = true, -- Enable virtual text for diagnostics
+  signs = false, -- Disable diagnostic signs in signcolumn
+  update_in_insert = false, -- Don't update diagnostics while typing
+  float = { border = "single" }, -- Use rounded borders for floating windows
+})

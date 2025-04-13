@@ -64,6 +64,35 @@ require("lazy").setup({
   ui = {
     border = "single", -- Use single line borders for Lazy UI
     title = " Lazy Plugin Manager ", -- Set custom title for Lazy UI
+    wrap = true,
+    pills = true,
+    backdrop = 0,
+    icons = {
+      cmd = " ",
+      config = "",
+      debug = "● ",
+      event = " ",
+      favorite = " ",
+      ft = " ",
+      init = " ",
+      import = " ",
+      keys = " ",
+      lazy = "󰒲 ",
+      loaded = "●",
+      not_loaded = "○",
+      plugin = " ",
+      runtime = " ",
+      require = "󰢱 ",
+      source = " ",
+      start = " ",
+      task = "✔ ",
+      list = {
+        "●",
+        "➜",
+        "★",
+        "‒",
+      },
+    },
   },
   debug = false, -- Disable Lazy's debug mode for better performance
 })

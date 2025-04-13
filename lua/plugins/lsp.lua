@@ -87,7 +87,7 @@ return {
 
       -- Auto install tools (formatters) if not installed
       local mason_registry = require("mason-registry")
-      local tools = { "prettierd", "stylua", "shfmt", "black" }
+      local tools = { "prettierd", "stylua", "shfmt" }
 
       -- Check and install tools if not present
       for _, tool in ipairs(tools) do

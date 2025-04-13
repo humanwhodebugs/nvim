@@ -1,7 +1,7 @@
 -- General Settings
-vim.opt.fileencoding = "utf-8"
+-- vim.opt.fileencoding = "utf-8"
 
-vim.opt.laststatus = 0 -- Disable statusline
+vim.opt.laststatus = 3 -- Disable statusline
 vim.opt.cmdheight = 0 -- Hide command line when not in use
 vim.opt.showmode = false -- Disable mode display (e.g. -- INSERT --)
 vim.opt.ruler = false -- Disable cursor position display (row/column)
@@ -9,8 +9,8 @@ vim.opt.statusline = "" -- Clear statusline
 vim.opt.signcolumn = "no" -- Disable signcolumn (e.g. for Git or diagnostics)
 
 -- UI Enhancements
-vim.opt.number = true -- Show absolute line numbers
-vim.opt.relativenumber = true -- Show relative line numbers
+vim.opt.number = false -- Show absolute line numbers
+vim.opt.relativenumber = false -- Show relative line numbers
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.termguicolors = true -- Enable true color support
 vim.opt.scrolloff = 4 -- Keep 4 lines above/below cursor
@@ -54,11 +54,3 @@ vim.opt.splitbelow = true -- Horizontal splits open below
 
 -- Better Completion Experience
 vim.opt.completeopt = { "menuone", "noselect" } -- Better completion options
-
--- LSP & Diagnostics
-vim.diagnostic.config({
-  virtual_text = true, -- Enable virtual text for diagnostics
-  signs = false, -- Disable diagnostic signs in signcolumn
-  update_in_insert = false, -- Don't update diagnostics while typing
-  float = { border = "rounded" }, -- Use rounded borders for floating windows
-})

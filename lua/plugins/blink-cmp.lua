@@ -1,7 +1,7 @@
 return {
   "Saghen/blink.cmp",
   version = "*", -- Always use the latest version
-  event = { "BufReadPost", "BufNewFile" }, -- Load plugin when opening or creating a file
+  event = { "VeryLazy" }, -- Load plugin when opening or creating a file
   opts = {
     completion = {
       menu = {

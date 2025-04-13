@@ -5,7 +5,7 @@ return {
     "nvim-tree/nvim-web-devicons", -- Not strictly required, but recommended for file icons
     "MunifTanjim/nui.nvim", -- Required for popup UI elements
   },
-  event = "VimEnter", -- Initialize Neo-tree on VimEnter
+  event = "VeryLazy", -- Initialize Neo-tree on VimEnter
   opts = {
     close_if_last_window = true, -- Close Neo-tree if it's the only window open
     popup_border_style = "single", -- Border style for pop-up windows
