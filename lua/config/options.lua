@@ -15,6 +15,7 @@ vim.opt.cursorline = true -- Highlight current line
 vim.opt.termguicolors = true -- Enable true color support
 vim.opt.scrolloff = 4 -- Keep 4 lines above/below cursor
 vim.opt.sidescrolloff = 4 -- Keep 4 columns to the left/right of cursor
+vim.opt.wrap = false -- Disable auto wrap
 
 -- Performance Tweaks
 vim.opt.updatetime = 250 -- Faster UI update (default is 4000ms)

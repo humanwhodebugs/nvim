@@ -4,19 +4,19 @@ return {
   config = function()
     require("gitsigns").setup({
       signs = {
-        add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "" },
-        topdelete = { text = "" },
-        changedelete = { text = "▎" },
-        untracked = { text = "▎" },
+        add = { text = "" }, -- icon plus
+        change = { text = "" }, -- dot change
+        delete = { text = "󰍵" }, -- icon trash/delete
+        topdelete = { text = "󰍵" },
+        changedelete = { text = "󰜥" }, -- icon combine change/delete
+        untracked = { text = "" }, -- icon new/untracked
       },
       signs_staged = {
-        add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "" },
-        topdelete = { text = "" },
-        changedelete = { text = "▎" },
+        add = { text = "" }, -- bold plus
+        change = { text = "" }, -- filled circle
+        delete = { text = "󰍴" }, -- staged delete
+        topdelete = { text = "󰍴" },
+        changedelete = { text = "󰦓" }, -- change/delete staged
       },
       signs_staged_enable = true,
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
