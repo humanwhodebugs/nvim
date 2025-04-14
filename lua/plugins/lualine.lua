@@ -21,7 +21,19 @@ return {
       },
 
       -- Shows Git branch and diff information
-      lualine_b = { "branch", "diff" },
+      lualine_b = {
+        {
+          "branch",
+        },
+        {
+          "diff",
+          symbols = {
+            added = "+",
+            modified = "!",
+            removed = "-",
+          },
+        },
+      },
 
       -- Displays diagnostics
       lualine_c = {

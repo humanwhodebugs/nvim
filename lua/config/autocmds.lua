@@ -20,8 +20,16 @@ vim.api.nvim_create_autocmd("BufWritePre", { -- Create an autocmd that triggers 
 
 -- LSP & Diagnostics
 vim.diagnostic.config({
+  -- Enable diagnostics sign in signcolumn (with icons)
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "󰅚",
+      [vim.diagnostic.severity.WARN] = "⚠",
+      [vim.diagnostic.severity.INFO] = "ℹ",
+      [vim.diagnostic.severity.HINT] = "󰌶",
+    },
+  },
   virtual_text = true, -- Enable virtual text for diagnostics
-  signs = false, -- Disable diagnostic signs in signcolumn
-  update_in_insert = false, -- Don't update diagnostics while typing
-  float = { border = "single" }, -- Use rounded borders for floating windows
+  update_in_insert = { border = "single" }, -- Don't update diagnostics while typing
+  float = { border = "single" }, -- Use single borders for floating windows
 })
