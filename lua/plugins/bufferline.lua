@@ -45,8 +45,29 @@ return {
 
       diagnostics = "nvim_lsp", -- Show LSP diagnostics in bufferline
       diagnostics_indicator = function(count, level, diagnostics_dict, context)
-        local icon = level:match("error") and " " or " " -- Icon based on diagnostic level
-        return " " .. icon .. count -- e.g. "  2"
+        local icons = {
+          error = "󰅚", -- Icon for error
+          warning = "⚠", -- Icon for warning
+          info = "ℹ", -- Icon for info
+          hint = "󰌶", -- Icon for hint
+        }
+
+        local highest_level
+        if diagnostics_dict.error and diagnostics_dict.error > 0 then
+          highest_level = "error"
+        elseif diagnostics_dict.warning and diagnostics_dict.warning > 0 then
+          highest_level = "warning"
+        elseif diagnostics_dict.info and diagnostics_dict.info > 0 then
+          highest_level = "info"
+        elseif diagnostics_dict.hint and diagnostics_dict.hint > 0 then
+          highest_level = "hint"
+        else
+          highest_level = level or "hint" -- Fallback
+        end
+
+        local icon = icons[highest_level]
+
+        return " " .. icon .. " " .. count
       end,
 
       offsets = {

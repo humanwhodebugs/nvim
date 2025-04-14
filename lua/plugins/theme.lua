@@ -39,6 +39,27 @@ return {
         bufferline = true, -- Enable integration with Bufferline
         gitsigns = true, -- Enable integration with gitsigns
         mason = true, -- Enable integration with Mason
+        -- Enable integration with Neovim LSP config
+        native_lsp = {
+          enabled = true,
+          virtual_text = {
+            errors = { "italic" },
+            hints = { "italic" },
+            warnings = { "italic" },
+            information = { "italic" },
+            ok = { "italic" },
+          },
+          underlines = {
+            errors = { "undercurl" },
+            hints = { "undercurl" },
+            warnings = { "undercurl" },
+            information = { "undercurl" },
+            ok = { "undercurl" },
+          },
+          inlay_hints = {
+            background = true,
+          },
+        },
         neotree = true, -- Enable integration with Neo-tree
         treesitter = true, -- Enable integration with Treesitter
         snacks = {
