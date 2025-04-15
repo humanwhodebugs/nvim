@@ -6,12 +6,6 @@ vim.api.nvim_create_autocmd("TextYankPost", { -- Create an autocmd that triggers
   end, -- End of callback function
 }) -- End of autocmd definition for TextYankPost
 
--- Automatically reload Neovim config when saving files inside the config directory
-vim.api.nvim_create_autocmd("BufWritePost", { -- Create an autocmd that triggers after a file is written
-  pattern = vim.fn.expand("~") .. "/.config/nvim/lua/*.lua", -- Match all Lua files in Neovim config directory
-  command = "source <afile>", -- Reload the modified config file automatically
-}) -- End of autocmd definition for BufWritePost
-
 -- Automatically trim trailing whitespace before saving a file
 vim.api.nvim_create_autocmd("BufWritePre", { -- Create an autocmd that triggers before writing a buffer
   pattern = "*", -- Apply to all files
@@ -30,6 +24,6 @@ vim.diagnostic.config({
     },
   },
   virtual_text = true, -- Enable virtual text for diagnostics
-  update_in_insert = { border = "single" }, -- Don't update diagnostics while typing
+  update_in_insert = false, -- Don't update diagnostics while typing
   float = { border = "single" }, -- Use single borders for floating windows
 })
