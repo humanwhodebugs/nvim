@@ -1,5 +1,4 @@
 -- General Settings
--- vim.opt.fileencoding = "utf-8"
 
 vim.opt.laststatus = 3 -- Disable statusline
 vim.opt.cmdheight = 0 -- Hide command line when not in use
