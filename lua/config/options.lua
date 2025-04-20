@@ -8,8 +8,9 @@ vim.opt.statusline = "" -- Clear statusline
 vim.opt.signcolumn = "yes" -- Show sign column on the left
 
 -- UI Enhancements
-vim.opt.number = false -- Show absolute line numbers
-vim.opt.relativenumber = false -- Show relative line numbers
+vim.opt.number = true -- Show absolute line numbers
+vim.opt.numberwidth = 2 -- Width between sign column and number
+vim.opt.relativenumber = true -- Show relative line numbers
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.termguicolors = true -- Enable true color support
 vim.opt.scrolloff = 4 -- Keep 4 lines above/below cursor

@@ -5,8 +5,8 @@ return {
     options = {
       theme = "catppuccin", -- Set the theme to catppuccin
       icons_enabled = true, -- Enable icons
-      section_separators = { left = "", right = "" }, -- Section separators
-      component_separators = { left = "", right = "" }, -- Component separators
+      section_separators = { left = "", right = "" }, -- Section separators
+      component_separators = { left = " ", right = " " }, -- Component separators
       globalstatus = true, -- Use global statusline
     },
     sections = {
@@ -32,6 +32,7 @@ return {
             modified = "!",
             removed = "-",
           },
+          color = { bg = "#1e1e2e" },
         },
       },
 
@@ -56,7 +57,7 @@ return {
       },
 
       -- Displays the file type
-      lualine_y = { "filetype" },
+      lualine_y = { { "filetype", color = { bg = "#1e1e2e" } } },
 
       -- Shows file status (modified, readonly, unnamed) and cursor position
       lualine_z = {

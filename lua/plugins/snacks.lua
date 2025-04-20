@@ -93,6 +93,8 @@ return {
     -- Notification settings
     notifier = { enabled = true, timeout = 3000, style = "fancy" },
 
+    statuscolumn = { enabled = true },
+
     -- Picker layout configuration
     picker = {
       layout = {
