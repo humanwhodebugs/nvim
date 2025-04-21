@@ -8,14 +8,15 @@ return {
     end,
     opts = { -- Configuration options for nvim-treesitter
       ensure_installed = { -- List of languages to install parsers for
-        "javascript", -- JavaScript
-        "typescript", -- TypeScript
-        "tsx", -- TSX (React TypeScript)
-        "html", -- HTML
+        "bash", -- Bash Script File
         "css", -- CSS
+        "html", -- HTML
         "json", -- JSON
+        "javascript", -- JavaScript
         "lua", -- Lua
         "markdown", -- Markdown
+        "typescript", -- TypeScript
+        "tsx", -- TSX (React JavaScript & TypeScript)
       },
       highlight = { enable = true }, -- Enable syntax highlighting using Treesitter
       indent = { enable = false }, -- Disable automatic indentation by Treesitter
