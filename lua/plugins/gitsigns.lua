@@ -4,19 +4,19 @@ return {
   config = function()
     require("gitsigns").setup({
       signs = {
-        add = { text = " " }, -- icon plus
-        change = { text = " " }, -- dot change
-        delete = { text = " 󰍵" }, -- icon trash/delete
-        topdelete = { text = " 󰍵" },
-        changedelete = { text = " 󰜥" }, -- icon combine change/delete
-        untracked = { text = " " }, -- icon new/untracked
+        add = { text = " │" }, -- thin vertical line for added lines
+        change = { text = " ┃" }, -- thick vertical line for modified lines
+        delete = { text = " " }, -- trash icon for deleted lines
+        topdelete = { text = " " }, -- same as delete for top-level deletions
+        changedelete = { text = " " }, -- flame icon for changed and deleted lines
+        untracked = { text = " " }, -- question mark for untracked files
       },
       signs_staged = {
-        add = { text = "" }, -- bold plus
-        change = { text = "" }, -- filled circle
-        delete = { text = "󰍴" }, -- staged delete
-        topdelete = { text = "󰍴" },
-        changedelete = { text = "󰦓" }, -- change/delete staged
+        add = { text = " │" }, -- thin line for staged adds
+        change = { text = " ┃" }, -- thick line for staged changes
+        delete = { text = " " }, -- X mark for staged deletions
+        topdelete = { text = " " }, -- same X for staged top-level deletions
+        changedelete = { text = " " }, -- trash can for staged changedelete
       },
       signs_staged_enable = true,
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
