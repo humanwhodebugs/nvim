@@ -17,10 +17,10 @@ vim.diagnostic.config({
   -- Enable diagnostics sign in signcolumn (with icons)
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = "󰅚",
-      [vim.diagnostic.severity.WARN] = "⚠",
-      [vim.diagnostic.severity.INFO] = "ℹ",
-      [vim.diagnostic.severity.HINT] = "󰌶",
+      [vim.diagnostic.severity.ERROR] = " 󰅚",
+      [vim.diagnostic.severity.WARN] = " ⚠",
+      [vim.diagnostic.severity.INFO] = " ℹ",
+      [vim.diagnostic.severity.HINT] = " 󰌶",
     },
   },
   virtual_text = true, -- Enable virtual text for diagnostics

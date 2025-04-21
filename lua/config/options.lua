@@ -5,7 +5,7 @@ vim.opt.cmdheight = 0 -- Hide command line when not in use
 vim.opt.showmode = false -- Disable mode display (e.g. -- INSERT --)
 vim.opt.ruler = false -- Disable cursor position display (row/column)
 vim.opt.statusline = "" -- Clear statusline
-vim.opt.signcolumn = "yes" -- Show sign column on the left
+vim.opt.signcolumn = "number" -- Show sign column on number line
 
 -- UI Enhancements
 vim.opt.number = true -- Show absolute line numbers

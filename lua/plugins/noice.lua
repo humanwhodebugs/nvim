@@ -21,6 +21,7 @@ return {
           bottom_search = true, -- Place the command-line search at the bottom
           command_palette = false, -- Combine input for command and search
           long_message_to_split = true, -- Split long messages into a new window
+          lsp_doc_border = true, -- Borders for LSP Documentations
         },
         cmdline = {
           view = "cmdline", -- Use cmdline view for command-line input
@@ -38,6 +39,12 @@ return {
             help = { pattern = "^:%s*he?l?p?%s+", icon = "" },
             input = { view = "cmdline", icon = "󰥻 " }, -- Used by input()
             -- lua = false, -- to disable a format, set to `false`
+          },
+        },
+        -- Controlling LSP Documentations border style
+        views = {
+          hover = {
+            border = { style = "single" },
           },
         },
       })

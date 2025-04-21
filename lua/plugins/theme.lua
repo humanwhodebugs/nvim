@@ -36,6 +36,7 @@ return {
         operators = {}, -- No special style for operators
       },
       integrations = { -- Enable integration with various plugins
+        blink_cmp = true, -- Enable integration with blink-cmp
         bufferline = true, -- Enable integration with Bufferline
         gitsigns = true, -- Enable integration with gitsigns
         mason = true, -- Enable integration with Mason

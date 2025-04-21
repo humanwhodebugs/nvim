@@ -4,12 +4,12 @@ return {
   config = function()
     require("gitsigns").setup({
       signs = {
-        add = { text = "" }, -- icon plus
-        change = { text = "" }, -- dot change
-        delete = { text = "󰍵" }, -- icon trash/delete
-        topdelete = { text = "󰍵" },
-        changedelete = { text = "󰜥" }, -- icon combine change/delete
-        untracked = { text = "" }, -- icon new/untracked
+        add = { text = " " }, -- icon plus
+        change = { text = " " }, -- dot change
+        delete = { text = " 󰍵" }, -- icon trash/delete
+        topdelete = { text = " 󰍵" },
+        changedelete = { text = " 󰜥" }, -- icon combine change/delete
+        untracked = { text = " " }, -- icon new/untracked
       },
       signs_staged = {
         add = { text = "" }, -- bold plus

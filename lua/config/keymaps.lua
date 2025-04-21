@@ -1,3 +1,6 @@
+-- LSP Code Action: Trigger code action (e.g., fix, refactor, etc.)
+vim.api.nvim_set_keymap("n", "<leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
+
 -- TERMINAL MANAGEMENT (ToggleTerm)
 vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Open Floating Terminal" })
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Open Horizontal Terminal" })

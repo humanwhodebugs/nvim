@@ -93,24 +93,38 @@ return {
     -- Notification settings
     notifier = { enabled = true, timeout = 3000, style = "fancy" },
 
-    statuscolumn = { enabled = true },
-
     -- Picker layout configuration
     picker = {
       layout = {
+        -- Main layout settings for the picker
+        preview = "main", -- Set the preview window to be the main window in the layout
         layout = {
-          box = "horizontal", -- Layout orientation
-          width = 0.8, -- Width of the picker box
-          min_width = 120, -- Minimum width of the picker box
-          height = 0.8, -- Height of the picker box
+          backdrop = false, -- Disable backdrop (no blurred background behind picker)
+          width = 40, -- Set the width of the picker layout
+          min_width = 40, -- Set the minimum width of the picker window
+          height = 0, -- Set the height of the layout (can be adjusted based on content)
+          position = "left", -- Set the position of the picker to the left side of the screen
+          border = "none", -- No border around the layout
+          box = "vertical", -- Set the layout style to vertical (e.g., stack windows on top of each other)
+
+          -- Window configurations for different sections
           {
-            box = "vertical", -- Vertical layout for sub-boxes
-            border = "single", -- Border style for sub-boxes
-            title = "{title} {live} {flags}", -- Title format for sub-boxes
-            { win = "input", height = 1, border = "bottom" }, -- Input window configuration
-            { win = "list", border = "none" }, -- List window configuration
+            win = "input", -- Define the input window section
+            height = 1, -- Set the height of the input section
+            border = "single", -- Use a single border around the input window
+            title = "{title} {live} {flags}", -- Title format for the input window
+            title_pos = "center", -- Center the title in the input window
           },
-          { win = "preview", title = "{preview}", border = "single", width = 0.5 }, -- Preview window configuration
+          {
+            win = "list", -- Define the list window section (for displaying options)
+            border = "none", -- No border around the list window
+          },
+          {
+            win = "preview", -- Define the preview window section (to show previews of selected items)
+            title = "{preview}", -- Title for the preview window
+            height = 0.4, -- Set the height of the preview window (40% of the parent window)
+            border = "top", -- Use a top border for the preview window
+          },
         },
       },
     },
