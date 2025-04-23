@@ -27,11 +27,7 @@ return {
         },
         {
           "diff",
-          symbols = {
-            added = "+",
-            modified = "!",
-            removed = "-",
-          },
+          symbols = { added = " ", modified = " ", removed = " " },
           color = { bg = "#1e1e2e" },
         },
       },
