@@ -74,8 +74,9 @@ return {
         {
           filetype = "neo-tree", -- Offset section when Neo-tree is open
           text = "File Explorer", -- Label for the offset
-          highlight = "Directory", -- Highlight group for the label
+          highlight = "WinSeparator", -- Custom highlight colors
           text_align = "center", -- Align text to center
+          separator = true, -- Enable bufferline separator
         },
       },
     }
