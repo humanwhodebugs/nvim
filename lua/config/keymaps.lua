@@ -1,7 +1,11 @@
--- LSP Code Action: Trigger code action (e.g., fix, refactor, etc.)
+-- =======================================
+-- ============ LSP ======================
+-- =======================================
 vim.api.nvim_set_keymap("n", "<leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", { noremap = true, silent = true })
 
--- TERMINAL MANAGEMENT (ToggleTerm)
+-- =======================================
+-- ============ TERMINAL (ToggleTerm) ====
+-- =======================================
 vim.keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Open Floating Terminal" })
 vim.keymap.set("n", "<leader>th", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Open Horizontal Terminal" })
 vim.keymap.set("n", "<leader>tv", "<cmd>ToggleTerm direction=vertical<CR>", { desc = "Open Vertical Terminal" })
@@ -22,10 +26,14 @@ end, { desc = "Toggle Terminal 3" })
 -- Exit terminal mode using Escape
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
--- FILE EXPLORER (Neo-tree)
+-- =======================================
+-- ============ FILE EXPLORER ============
+-- =======================================
 vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
 
--- TELESCOPE / SNACKS INTEGRATION
+-- =======================================
+-- ============ TELESCOPE / SNACKS =======
+-- =======================================
 vim.keymap.set("n", "<leader>r", function()
   vim.cmd("lua Snacks.dashboard.pick('oldfiles')")
 end, { desc = "Open recent files (Snacks)" })
@@ -34,34 +42,55 @@ vim.keymap.set("n", "<leader>n", function()
   vim.cmd("lua Snacks.notifier.show_history()")
 end, { desc = "Show notification history (Snacks)" })
 
--- BUFFER MANAGEMENT
-vim.keymap.set("n", "<leader>d", "<cmd>bdelete!<CR>", { desc = "Delete Current Buffer" }) -- Delete current buffer
-
--- Split window
-vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split Vertical" }) -- Vertical split
-vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split Horizontal" }) -- Horizontal split
+-- =======================================
+-- ============ BUFFER MANAGEMENT ========
+-- =======================================
+vim.keymap.set("n", "<leader>d", "<cmd>bdelete!<CR>", { desc = "Delete Current Buffer" })
 
 -- Navigate between buffers
-vim.api.nvim_set_keymap("n", "<S-h>", ":bprev<CR>", { noremap = true, silent = true }) -- Previous buffer
-vim.api.nvim_set_keymap("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true }) -- Next buffer
+vim.api.nvim_set_keymap("n", "<S-h>", ":bprev<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<S-l>", ":bnext<CR>", { noremap = true, silent = true })
 
--- WINDOW NAVIGATION
-vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true }) -- Move to left window
-vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true }) -- Move to bottom window
-vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true }) -- Move to top window
-vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true }) -- Move to right window
+-- =======================================
+-- ============ WINDOW SPLITS ============
+-- =======================================
+vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split Vertical" })
+vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split Horizontal" })
 
--- INSERT MODE SHORTCUTS
-vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true }) -- Exit insert mode with 'jk'
-vim.keymap.set("i", "<Esc>", "<NOP>", { noremap = true, silent = true }) -- Disable Escape in insert mode
+-- Resize windows using Ctrl + arrow keys
+vim.keymap.set("n", "<C-Left>", "<Cmd>vertical resize -2<CR>", { desc = "Resize split ←" })
+vim.keymap.set("n", "<C-Right>", "<Cmd>vertical resize +2<CR>", { desc = "Resize split →" })
+vim.keymap.set("n", "<C-Down>", "<Cmd>resize +2<CR>", { desc = "Resize split ↓" })
+vim.keymap.set("n", "<C-Up>", "<Cmd>resize -2<CR>", { desc = "Resize split ↑" })
 
--- DELETE BEHAVIOR
-vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true }) -- Don't yank on 'x'
--- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true }) -- Don't yank on 'd'
--- vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true }) -- Don't yank on 'd' (visual mode)
+-- Move between windows
+vim.api.nvim_set_keymap("n", "<C-h>", "<C-w>h", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 
--- DISABLE ARROW KEYS
+-- =======================================
+-- ============ INSERT MODE ==============
+-- =======================================
+vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
+vim.keymap.set("i", "<Esc>", "<NOP>", { noremap = true, silent = true })
 
+-- =======================================
+-- ============ DELETE BEHAVIOR ==========
+-- =======================================
+vim.api.nvim_set_keymap("n", "x", '"_x', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("n", "d", '"_d', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap("v", "d", '"_d', { noremap = true, silent = true })
+
+-- =======================================
+-- ============ MISC SHORTCUTS ===========
+-- =======================================
+vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true }) -- Copy all
+vim.keymap.set("n", "<C-s>", ":w<CR>", { noremap = true, silent = true }) -- Save file
+
+-- =======================================
+-- ============ DISABLE ARROW KEYS =======
+-- =======================================
 -- Normal mode
 vim.keymap.set("n", "<Up>", "<NOP>", { noremap = true, silent = true })
 vim.keymap.set("n", "<Down>", "<NOP>", { noremap = true, silent = true })
@@ -74,12 +103,11 @@ vim.keymap.set("v", "<Down>", "<NOP>", { noremap = true, silent = true })
 vim.keymap.set("v", "<Left>", "<NOP>", { noremap = true, silent = true })
 vim.keymap.set("v", "<Right>", "<NOP>", { noremap = true, silent = true })
 
--- Optional: Insert and Terminal mode (commented out)
+-- Optional: Insert and Terminal mode (commented)
 -- vim.keymap.set("i", "<Up>", "<NOP>", { noremap = true, silent = true })
 -- vim.keymap.set("i", "<Down>", "<NOP>", { noremap = true, silent = true })
 -- vim.keymap.set("i", "<Left>", "<NOP>", { noremap = true, silent = true })
 -- vim.keymap.set("i", "<Right>", "<NOP>", { noremap = true, silent = true })
-
 -- vim.keymap.set("t", "<Up>", "<NOP>", { noremap = true, silent = true })
 -- vim.keymap.set("t", "<Down>", "<NOP>", { noremap = true, silent = true })
 -- vim.keymap.set("t", "<Left>", "<NOP>", { noremap = true, silent = true })
