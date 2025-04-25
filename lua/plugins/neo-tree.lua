@@ -77,7 +77,7 @@ return {
     default_component_configs = {
       icon = {
         folder_closed = "", -- Icon for closed folder
-        folder_open = "", -- Icon for open folder
+        folder_open = "", -- Icon for open folder
         folder_empty = "", -- Icon for empty folder
         default = "", -- Default icon for files
       },
