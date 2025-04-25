@@ -13,7 +13,7 @@ return {
     close_if_last_window = true, -- Close Neo-tree if it's the only window open
     popup_border_style = "single", -- Border style for pop-up windows
     enable_git_status = false, -- Show Git status globally
-    enable_diagnostics = true, -- Show LSP diagnostics (errors/warnings)
+    enable_diagnostics = false, -- Show LSP diagnostics (errors/warnings) globally
     filesystem = {
       follow_current_file = {
         enabled = true, -- Neo-tree will follow the currently opened file
