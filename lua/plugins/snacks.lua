@@ -91,7 +91,7 @@ return {
     },
 
     -- Notification settings
-    notifier = { enabled = true, timeout = 3000, style = "fancy" },
+    notifier = { enabled = true, timeout = 3000, style = "compact" },
 
     -- Picker layout configuration
     picker = {

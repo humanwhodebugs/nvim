@@ -84,6 +84,11 @@ return {
           SnacksDashboardIcon = { fg = "#cdd6f4" }, -- Set color for Snacks dashboad icon
           SnacksDashboardKey = { fg = "#cdd6f4" }, -- Set color for Snacks dashboar key
           SnacksDashboardTitle = { fg = "#cdd6f4" }, -- Set color for Snacks dashboard title
+          SnacksNotifierBorderInfo = { fg = "#f5c2e7" }, -- Set color for Snacks notif border
+          SnacksNotifierFooterInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif footer
+          SnacksNotifierIconInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif icon
+          SnacksNotifierInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif info
+          SnacksNotifierTitleInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif title info
           WinSeparator = { fg = "#f5c2e7" }, -- Set separator color between windows
         }
       end,
