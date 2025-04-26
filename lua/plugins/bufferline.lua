@@ -11,7 +11,7 @@ return {
     -- Override or add custom highlights
     opts.highlights = {
       separator = {
-        fg = "#f5c2e7", -- Separator color
+        fg = "#cdd6f4", -- Separator color
         bg = "#1e1e2e", -- Background color
       },
       separator_selected = {
@@ -73,8 +73,8 @@ return {
       offsets = {
         {
           filetype = "neo-tree", -- Offset section when Neo-tree is open
+          highlight = "Catppuccin", -- Custom highlight colors
           text = "File Explorer", -- Label for the offset
-          highlight = "WinSeparator", -- Custom highlight colors
           text_align = "center", -- Align text to center
           separator = true, -- Enable bufferline separator
         },

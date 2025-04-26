@@ -47,9 +47,9 @@ return {
       separator = { left = "|", right = "|" },
       separator_active = false,
 
-      highlight_tab_active = "WinSeparator",
-      highlight_separator = "WinSeparator",
-      highlight_separator_active = "WinSeparator",
+      highlight_tab_active = "Catppuccin",
+      highlight_separator = "Catppuccin",
+      highlight_separator_active = "Catppuccin",
     },
 
     window = {

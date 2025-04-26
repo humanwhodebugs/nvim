@@ -35,6 +35,11 @@ return {
         types = {}, -- No special style for types
         operators = {}, -- No special style for operators
       },
+      -- color_overrides = {
+      --   all = {
+      --     text = "#cdd6f4",
+      --   },
+      -- },
       integrations = { -- Enable integration with various plugins
         blink_cmp = true, -- Enable integration with blink-cmp
         bufferline = true, -- Enable integration with Bufferline
@@ -71,8 +76,19 @@ return {
 
       custom_highlights = function()
         return {
-          NeoTreeWinSeparator = { fg = "#f5c2e7" }, -- Set separator color for Neo-tree
+          Catppuccin = { fg = "#cdd6f4" }, -- Custom color
           FloatBorder = { fg = "#f5c2e7" }, -- Set border color for floating windows
+          NeoTreeWinSeparator = { fg = "#f5c2e7" }, -- Set separator color for Neo-tree
+          NeoTreeNormal = { fg = "#ffffff" }, -- Set separator color for Neo-tree
+          NeoTreeDirectoryName = { fg = "#cdd6f4" }, -- Set color for Neo-tree directory name
+          NeoTreeDirectoryIcon = { fg = "#cdd6f4" }, -- Set color for Neo-tree directory Icon
+          NeoTreeFileName = { fg = "#cdd6f4" }, -- Set color for Neo-tree file name
+          NeoTreeRootName = { fg = "#cdd6f4" }, -- Set color for Neo-tree root folder name
+          SnacksDashboardDesc = { fg = "#cdd6f4" }, -- Set color for Snacks dashboard description
+          SnacksDashboardHeader = { fg = "#cdd6f4" }, -- Set color for Snacks header
+          SnacksDashboardIcon = { fg = "#cdd6f4" }, -- Set color for Snacks dashboad icon
+          SnacksDashboardKey = { fg = "#cdd6f4" }, -- Set color for Snacks dashboar key
+          SnacksDashboardTitle = { fg = "#cdd6f4" }, -- Set color for Snacks dashboard title
           WinSeparator = { fg = "#f5c2e7" }, -- Set separator color between windows
         }
       end,

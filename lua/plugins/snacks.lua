@@ -25,12 +25,12 @@ return {
 
         -- Define key bindings for the dashboard
         keys = {
-          --  {
-          --    icon = " ", -- Icon representing configuration
-          --    key = "c", -- Keybinding to trigger the action
-          --    desc = "配置", -- Configuration
-          --    action = ":e $MYVIMRC", -- Open the Neovim configuration file
-          --  },
+          {
+            icon = " ", -- Icon representing configuration
+            key = "c", -- Keybinding to trigger the action
+            desc = "配置", -- Configuration
+            action = ":e $MYVIMRC", -- Open the Neovim configuration file
+          },
           {
             icon = "󰒲 ", -- Icon representing Lazy plugin manager
             key = "l",
@@ -129,8 +129,40 @@ return {
       },
     },
 
-    -- UI styles for notifications
+    -- UI styles for dashboard and notifications
+    -- Hope this fix number line appeared when adding plugins/setting up Neovim for the first time
     styles = {
+      dashboard = {
+        zindex = 10,
+        height = 0,
+        width = 0,
+        bo = {
+          bufhidden = "wipe",
+          buftype = "nofile",
+          buflisted = false,
+          filetype = "snacks_dashboard",
+          swapfile = false,
+          undofile = false,
+        },
+        wo = {
+          colorcolumn = "",
+          cursorcolumn = false,
+          cursorline = false,
+          foldmethod = "manual",
+          list = false,
+          number = false,
+          relativenumber = false,
+          sidescrolloff = 0,
+          signcolumn = "no",
+          spell = false,
+          statuscolumn = "",
+          statusline = "",
+          winbar = "",
+          winhighlight = "Normal:WinSeparator,NormalFloat:SnacksDashboardNormal",
+          wrap = false,
+        },
+      },
+
       notification = {
         border = "single", -- Border style for notifications
         zindex = 100, -- Z-index for the notification window
@@ -143,6 +175,7 @@ return {
         },
         bo = { filetype = "snacks_notif" }, -- Filetype for buffer options
       },
+
       notification_history = {
         border = "single", -- Border style for notification history
         zindex = 100, -- Z-index for notification history window
