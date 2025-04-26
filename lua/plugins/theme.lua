@@ -35,11 +35,6 @@ return {
         types = {}, -- No special style for types
         operators = {}, -- No special style for operators
       },
-      -- color_overrides = {
-      --   all = {
-      --     text = "#cdd6f4",
-      --   },
-      -- },
       integrations = { -- Enable integration with various plugins
         blink_cmp = true, -- Enable integration with blink-cmp
         bufferline = true, -- Enable integration with Bufferline
