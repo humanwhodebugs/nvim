@@ -5,9 +5,9 @@ return {
     -- Smear cursor when switching buffers or windows.
     smear_between_buffers = true,
     -- Smear cursor in insert mode.
-    smear_insert_mode = true,
+    smear_insert_mode = false,
     -- Smear cursor color. Defaults to Cursor GUI color if not set.
-    cursor_color = "#f5c2e7",
+    -- cursor_color = "#f5c2e7",
     -- Faster smear animation
     stiffness = 0.8,
     trailing_stiffness = 0.5,
