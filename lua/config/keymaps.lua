@@ -57,6 +57,9 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { noremap = true, silent = true }) -- Move to top window
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true, silent = true }) -- Move to right window
 
+-- Clear search highlighting when pressing Esc in normal mode
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { noremap = true, silent = true })
+
 -- INSERT MODE SHORTCUTS
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true }) -- Exit insert mode with 'jk'
 vim.keymap.set("i", "<Esc>", "<NOP>", { noremap = true, silent = true }) -- Disable Escape in insert mode
