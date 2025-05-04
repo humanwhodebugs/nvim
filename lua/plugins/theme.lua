@@ -5,10 +5,10 @@ return {
     lazy = false, -- Load the plugin immediately, not lazily
     priority = 1000, -- High priority to ensure the theme is loaded first
     opts = {
-      flavour = "mocha", -- Set the Catppuccin theme flavour (options: mocha, latte, etc.)
+      flavour = "latte", -- Set the Catppuccin theme flavour (options: mocha, latte, etc.)
       background = {
-        light = "mocha", -- Set the background theme for light mode
-        dark = "mocha", -- Set the background theme for dark mode
+        light = "latte", -- Set the background theme for light mode
+        dark = "latte", -- Set the background theme for dark mode
       },
       transparent_background = true, -- Enable transparent background
       show_end_of_buffer = false, -- Do not show '~' at the end of the buffer
@@ -71,25 +71,25 @@ return {
 
       custom_highlights = function()
         return {
-          Catppuccin = { fg = "#cdd6f4" }, -- Custom color
-          FloatBorder = { fg = "#f5c2e7" }, -- Set border color for floating windows
-          NeoTreeWinSeparator = { fg = "#f5c2e7" }, -- Set separator color for Neo-tree
-          NeoTreeNormal = { fg = "#ffffff" }, -- Set separator color for Neo-tree
-          NeoTreeDirectoryName = { fg = "#cdd6f4" }, -- Set color for Neo-tree directory name
-          NeoTreeDirectoryIcon = { fg = "#cdd6f4" }, -- Set color for Neo-tree directory Icon
-          NeoTreeFileName = { fg = "#cdd6f4" }, -- Set color for Neo-tree file name
-          NeoTreeRootName = { fg = "#cdd6f4" }, -- Set color for Neo-tree root folder name
-          SnacksDashboardDesc = { fg = "#cdd6f4" }, -- Set color for Snacks dashboard description
-          SnacksDashboardHeader = { fg = "#cdd6f4" }, -- Set color for Snacks header
-          SnacksDashboardIcon = { fg = "#cdd6f4" }, -- Set color for Snacks dashboad icon
-          SnacksDashboardKey = { fg = "#cdd6f4" }, -- Set color for Snacks dashboar key
-          SnacksDashboardTitle = { fg = "#cdd6f4" }, -- Set color for Snacks dashboard title
-          SnacksNotifierBorderInfo = { fg = "#f5c2e7" }, -- Set color for Snacks notif border
-          SnacksNotifierFooterInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif footer
-          SnacksNotifierIconInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif icon
-          SnacksNotifierInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif info
-          SnacksNotifierTitleInfo = { fg = "#cdd6f4" }, -- Set color for Snacks notif title info
-          WinSeparator = { fg = "#f5c2e7" }, -- Set separator color between windows
+          Catppuccin = { fg = "#4c4f69" }, -- Custom color
+          FloatBorder = { fg = "#4c4f69" }, -- Set border color for floating windows
+          NeoTreeWinSeparator = { fg = "#4c4f69" }, -- Set separator color for Neo-tree
+          NeoTreeNormal = { fg = "#4c4f69" }, -- Set separator color for Neo-tree
+          NeoTreeDirectoryName = { fg = "#4c4f69" }, -- Set color for Neo-tree directory name
+          NeoTreeDirectoryIcon = { fg = "#4c4f69" }, -- Set color for Neo-tree directory Icon
+          NeoTreeFileName = { fg = "#4c4f69" }, -- Set color for Neo-tree file name
+          NeoTreeRootName = { fg = "#4c4f69" }, -- Set color for Neo-tree root folder name
+          SnacksDashboardDesc = { fg = "#4c4f69" }, -- Set color for Snacks dashboard description
+          SnacksDashboardHeader = { fg = "#4c4f69" }, -- Set color for Snacks header
+          SnacksDashboardIcon = { fg = "#4c4f69" }, -- Set color for Snacks dashboad icon
+          SnacksDashboardKey = { fg = "#4c4f69" }, -- Set color for Snacks dashboar key
+          SnacksDashboardTitle = { fg = "#4c4f69" }, -- Set color for Snacks dashboard title
+          SnacksNotifierBorderInfo = { fg = "#4c4f69" }, -- Set color for Snacks notif border
+          SnacksNotifierFooterInfo = { fg = "#4c4f69" }, -- Set color for Snacks notif footer
+          SnacksNotifierIconInfo = { fg = "#4c4f69" }, -- Set color for Snacks notif icon
+          SnacksNotifierInfo = { fg = "#4c4f69" }, -- Set color for Snacks notif info
+          SnacksNotifierTitleInfo = { fg = "#4c4f69" }, -- Set color for Snacks notif title info
+          WinSeparator = { fg = "#4c4f69" }, -- Set separator color between windows
         }
       end,
     },

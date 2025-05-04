@@ -18,7 +18,8 @@ return {
             return " " .. str
           end,
           color = {
-            bg = "#f5c2e7",
+            bg = "#7c7f93",
+            fg = "#4c4f69",
           },
           separator = { right = "" },
         },
@@ -28,7 +29,8 @@ return {
       lualine_b = {
         {
           "branch",
-          color = { bg = "#1e1e2e" },
+          color = { bg = "#bcc0cc", fg = "#4c4f69" },
+          separator = { right = "" },
         },
       },
 
@@ -52,13 +54,13 @@ return {
       },
 
       -- Displays the file type
-      lualine_y = { { "filetype", color = { bg = "#1e1e2e" } } },
+      lualine_y = { { "filetype", color = { bg = "#acb0be", fg = "#4c4f69" } } },
 
       -- Shows file status (modified, readonly, unnamed) and cursor position
       lualine_z = {
         {
           "location",
-          color = { bg = "#f5c2e7", fg = "#1e1e2e", gui = "bold" }, -- Set color for the location section
+          color = { bg = "#7c7f93", fg = "#4c4f69", gui = "bold" }, -- Set color for the location section
         },
       },
     },

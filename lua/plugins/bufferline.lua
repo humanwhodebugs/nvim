@@ -11,26 +11,26 @@ return {
     -- Override or add custom highlights
     opts.highlights = {
       separator = {
-        fg = "#cdd6f4", -- Separator color
-        bg = "#1e1e2e", -- Background color
+        fg = "#4c4f69", -- Separator color
+        bg = "#eff1f5", -- Background color
       },
       separator_selected = {
         fg = "#f38ba8",
-        bg = "#1e1e2e",
+        bg = "#eff1f5",
       },
       background = {
         fg = "#cdd6f4", -- Inactive tab text color
-        bg = "#1e1e2e",
+        bg = "#eff1f5",
       },
       buffer_selected = {
-        fg = "#f5c2e7", -- Active tab text color
-        bg = "#1e1e2e",
+        fg = "#4c4f69", -- Active tab text color
+        bg = "#eff1f5",
         bold = true,
         italic = false,
       },
       indicator_selected = {
-        fg = "#f5c2e7",
-        bg = "#1e1e2e",
+        fg = "#4c4f69",
+        bg = "#eff1f5",
       },
     }
 
