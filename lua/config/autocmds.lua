@@ -27,3 +27,9 @@ vim.diagnostic.config({
   update_in_insert = false, -- Don't update diagnostics while typing
   float = { border = "single" }, -- Use single borders for floating windows
 })
+
+-- Yuck Autoformat
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.yuck",
+  command = "normal! gg=G", -- Menjalankan auto-indent pada file yuck sebelum disimpan
+})
