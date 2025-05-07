@@ -65,7 +65,7 @@ return {
         treesitter = true, -- Enable integration with Treesitter
         snacks = {
           enabled = true, -- Enable integration with snacks.nvim
-          indentscope_color = "pink", -- Set the indent scope color to pink
+          indentscope_color = "blue", -- Set the indent scope color to pink
         },
       },
 

@@ -20,8 +20,8 @@ return {
     },
     highlights = { -- Custom highlight groups for terminal appearance
       FloatBorder = { -- Customize the floating window border
-        guifg = "#f5c2e7", -- Set the foreground color for the border (light pink)
-        -- guibg = "#f5c2e7",  -- Background color (commented out)
+        guifg = "#4c4f69", -- Set the foreground color for the border
+        -- guibg = "#f5c2e7",  -- Background color
       },
     },
   },
