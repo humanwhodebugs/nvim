@@ -5,6 +5,19 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
 
+      -- Configuration for Rust LSP (rust-analyzer)
+      lspconfig.rust_analyzer.setup({
+        on_attach = function(client, bufnr)
+          -- Set keymaps or other configurations
+          -- local opts = { buffer = bufnr }
+          -- vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+          -- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+          -- vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+          -- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+          -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+        end,
+      })
+
       -- Configuration for TypeScript & JavaScript LSP (using ts_ls because tsserver has issues)
       lspconfig.ts_ls.setup({
         filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
@@ -103,7 +116,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     event = "VimEnter",
     opts = {
-      ensure_installed = { "lua_ls", "ts_ls", "eslint", "html", "cssls", "jsonls", "tailwindcss" },
+      ensure_installed = { "lua_ls", "ts_ls", "eslint", "html", "cssls", "jsonls", "tailwindcss", "rust_analyzer" },
     },
   },
 }
