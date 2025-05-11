@@ -114,7 +114,7 @@ return {
 
   {
     "williamboman/mason-lspconfig.nvim",
-    event = "VimEnter",
+    event = { "BufRead", "BufNewFile" },
     opts = {
       ensure_installed = { "lua_ls", "ts_ls", "eslint", "html", "cssls", "jsonls", "tailwindcss", "rust_analyzer" },
     },

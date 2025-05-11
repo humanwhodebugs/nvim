@@ -29,7 +29,7 @@ vim.diagnostic.config({
 })
 
 -- Yuck Autoformat
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.yuck",
-  command = "normal! gg=G", -- Menjalankan auto-indent pada file yuck sebelum disimpan
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.yuck",
+--   command = "normal! gg=G",
+-- })
