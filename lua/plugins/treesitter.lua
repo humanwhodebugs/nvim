@@ -2,7 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter", -- Plugin identifier from GitHub for nvim-treesitter
     build = ":TSUpdate", -- Command to run after the plugin is installed to update Treesitter parsers
-    event = { "BufReadPost", "BufNewFile" }, -- Trigger the plugin on opening or reading a buffer
+    event = { "BufReadPre", "BufNewFile" },
     config = function(_, opts) -- Setup configuration for Treesitter using provided options
       require("nvim-treesitter.configs").setup(opts) -- Apply the Treesitter configuration
     end,
