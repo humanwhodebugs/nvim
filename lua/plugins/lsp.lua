@@ -1,7 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = { "BufRead", "BufNewFile" },
+    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "html", "css", "json" },
     config = function()
       local lspconfig = require("lspconfig")
 
@@ -101,7 +101,7 @@ return {
 
   {
     "mason-org/mason-lspconfig.nvim",
-    event = { "BufRead", "BufNewFile" },
+    event = { "BufReadPre", "BufNewFile" },
     opts = {
       ensure_installed = { "lua_ls", "ts_ls", "eslint", "html", "cssls", "jsonls", "tailwindcss" },
     },
