@@ -25,31 +25,31 @@ return {
           {
             icon = " ", -- Icon representing configuration
             key = "c", -- Keybinding to trigger the action
-            desc = "設定", -- Configuration
+            desc = "Configuration", -- Configuration
             action = ":e $MYVIMRC", -- Open the Neovim configuration file
           },
           {
             icon = "󰒲 ", -- Icon representing Lazy plugin manager
             key = "l",
-            desc = "Lazy（プラグイン管理）", -- Lazy Plugin Manager
+            desc = "Lazy Plugin Manager", -- Lazy Plugin Manager
             action = ":Lazy", -- Open Lazy.nvim plugin manager
           },
           {
             icon = "󰙅 ", -- Icon representing Neo-tree file explorer
             key = "n",
-            desc = "ファイルマネージャー（Neo-tree）", -- File Explorer (Neo-tree)
+            desc = "Neo-Tree", -- File Explorer (Neo-tree)
             action = ":Neotree toggle", -- Toggle Neo-tree file explorer
           },
           {
             icon = " ", -- Icon representing recent files
             key = "r",
-            desc = "最近使ったファイル", -- Recent Files
+            desc = "Recent Files", -- Recent Files
             action = ":lua Snacks.dashboard.pick('oldfiles')",
           },
           {
             icon = " ", -- Icon representing quit action
             key = "q",
-            desc = "Neovim を終了する", -- Quit Neovim
+            desc = "Quit Neovim", -- Quit Neovim
             action = ":qa", -- Quit Neovim
           },
         },
@@ -59,7 +59,7 @@ return {
       sections = {
         { section = "header", align = "center" }, -- Display the ASCII header at the top
         { section = "keys", gap = 1, padding = 1 }, -- Display key bindings with spacing
-        { title = "白日の痛みを覚えている者はもういない", align = "center" }, -- Display a centered title
+        { title = "?", align = "center" }, -- Display a centered title
       },
     },
 
