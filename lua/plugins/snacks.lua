@@ -59,7 +59,7 @@ return {
       sections = {
         { section = "header", align = "center" }, -- Display the ASCII header at the top
         { section = "keys", gap = 1, padding = 1 }, -- Display key bindings with spacing
-        { title = "?", align = "center" }, -- Display a centered title
+        { title = "AestheticArch", align = "center" }, -- Display a centered title
       },
     },
 
