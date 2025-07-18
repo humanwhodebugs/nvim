@@ -2,6 +2,4 @@
 
 A minimal Neovim config curated for my workflow.
 
-![image](https://github.com/user-attachments/assets/0f8c7268-b202-455a-9f41-0ed886920341)
-![image](https://github.com/user-attachments/assets/27c30162-320f-4e2e-8de8-9de23ab6b612)
-
+<img width="1366" height="768" alt="Screenshot_2025-07-18-21-16-22" src="https://github.com/user-attachments/assets/5b9f101c-8768-4a44-84c6-82e6ae6aa0d9" />
