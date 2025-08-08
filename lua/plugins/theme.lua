@@ -2,6 +2,7 @@ return {
   {
     "catppuccin/nvim", -- Plugin repository for the Catppuccin theme
     name = "catppuccin", -- Custom name for the theme plugin
+    commit = "fa42eb5e26819ef58884257d5ae95dd0552b9a66", -- Latest releases had so many breaking changes
     lazy = false, -- Load the plugin immediately, not lazily
     priority = 1000, -- High priority to ensure the theme is loaded first
     opts = {
