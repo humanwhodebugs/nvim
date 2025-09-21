@@ -3,10 +3,8 @@ return {
     "neovim/nvim-lspconfig",
     ft = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "html", "css", "json" },
     config = function()
-      local lspconfig = require("lspconfig")
-
       -- Configuration for TypeScript & JavaScript LSP (using ts_ls because tsserver has issues)
-      lspconfig.ts_ls.setup({
+      vim.lsp.config("ts_ls", {
         filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
         on_attach = function(client, bufnr)
           -- Set keymaps or other configurations
@@ -14,35 +12,35 @@ return {
       })
 
       -- Configuration for ESLint (linter for JavaScript & TypeScript)
-      lspconfig.eslint.setup({
+      vim.lsp.config("eslint", {
         on_attach = function(client, bufnr)
           -- Set keymaps or other configurations
         end,
       })
 
       -- Configuration for LSP HTML
-      lspconfig.html.setup({
+      vim.lsp.config("html", {
         on_attach = function(client, bufnr)
           -- Set keymaps or other configurations
         end,
       })
 
       -- Configuration for LSP CSS
-      lspconfig.cssls.setup({
+      vim.lsp.config("cssls", {
         on_attach = function(client, bufnr)
           -- Set keymaps or other configurations
         end,
       })
 
       -- Configuration for LSP JSON
-      lspconfig.jsonls.setup({
+      vim.lsp.config("jsonls", {
         on_attach = function(client, bufnr)
           -- Set keymaps or other configurations
         end,
       })
 
       -- Configuration for LSP Tailwind CSS
-      lspconfig.tailwindcss.setup({
+      vim.lsp.config("tailwindcss", {
         filetypes = { "html", "css", "javascript", "typescript", "javascriptreact", "typescriptreact" },
         on_attach = function(client, bufnr)
           -- Set keymaps or other configurations
@@ -50,7 +48,7 @@ return {
       })
 
       -- Configuration for LSP Lua (lua_ls)
-      lspconfig.lua_ls.setup({
+      vim.lsp.config("lua_ls", {
         settings = {
           Lua = {
             workspace = {
