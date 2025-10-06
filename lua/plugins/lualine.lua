@@ -34,7 +34,7 @@ return {
         },
       },
 
-      -- Displays diagnostics
+      -- Displays git signs
       lualine_c = {
         {
           "diff",
@@ -42,7 +42,7 @@ return {
         },
       },
 
-      -- Display file format
+      -- Display diagnostic
       lualine_x = {
         {
           "diagnostics",

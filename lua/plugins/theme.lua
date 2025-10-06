@@ -74,7 +74,7 @@ return {
         return {
           Catppuccin = { fg = "#4c4f69" }, -- Custom color
           FloatBorder = { fg = "#4c4f69" }, -- Set border color for floating windows
-          Folded = { fg = "#6c6f85", bg = "#eff1f5", bold = true }, -- Set color for folded text
+          Folded = { fg = "#6c6f85", bg = "#eff1f5", bold = true, italic = true }, -- Set color for folded text
           FoldColumn = { fg = "#6c6f85", bg = "#eff1f5" }, -- Set color for fold column
           NeoTreeWinSeparator = { fg = "#4c4f69" }, -- Set separator color for Neo-tree
           NeoTreeNormal = { fg = "#4c4f69" }, -- Set separator color for Neo-tree

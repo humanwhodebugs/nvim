@@ -4,7 +4,7 @@ return {
   config = function()
     require("gitsigns").setup({
       signs = {
-        add = { text = " │" }, -- thin vertical line for added lines
+        add = { text = " ┃" }, -- thin vertical line for added lines
         change = { text = " ┃" }, -- thick vertical line for modified lines
         delete = { text = " " }, -- trash icon for deleted lines
         topdelete = { text = " " }, -- same as delete for top-level deletions
@@ -12,7 +12,7 @@ return {
         untracked = { text = " " }, -- question mark for untracked files
       },
       signs_staged = {
-        add = { text = " │" }, -- thin line for staged adds
+        add = { text = " ┃" }, -- thin line for staged adds
         change = { text = " ┃" }, -- thick line for staged changes
         delete = { text = " " }, -- X mark for staged deletions
         topdelete = { text = " " }, -- same X for staged top-level deletions
