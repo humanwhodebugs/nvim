@@ -38,7 +38,25 @@ vim.opt.softtabstop = 2 -- Set the number of spaces to treat as a tab stop
 -- Folding Settings
 vim.opt.foldmethod = "expr" -- Use expression for folding
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Use Treesitter for folding logic
-vim.opt.foldenable = false -- Start with all folds open
+vim.opt.foldenable = true -- Start with all folds closed
+-- Folding Settings
+vim.opt.foldmethod = "expr" -- Set folding method to expression
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- Use Treesitter as folding logic
+vim.opt.foldenable = true -- Enable folding by default
+vim.opt.foldtext = "v:lua.MyFoldText()" -- Use custom function for fold text
+
+function MyFoldText()
+  -- Get the first line of the fold
+  local line = vim.fn.getline(vim.v.foldstart)
+
+  -- Calculate the total number of lines in the fold
+  local count = vim.v.foldend - vim.v.foldstart + 1
+
+  -- Return custom text for fold display
+  return "  " .. line .. " ... (" .. count .. " lines)"
+end
+
+vim.opt.fillchars:append({ fold = " " }) -- Use space as fold filler character
 
 -- Clipboard & Mouse
 vim.opt.clipboard = "unnamedplus" -- Use system clipboard
