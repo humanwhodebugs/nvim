@@ -1,5 +1,4 @@
 -- General Settings
-
 vim.opt.laststatus = 3 -- Disable statusline
 vim.opt.cmdheight = 0 -- Hide command line when not in use
 vim.opt.showmode = false -- Disable mode display (e.g. -- INSERT --)

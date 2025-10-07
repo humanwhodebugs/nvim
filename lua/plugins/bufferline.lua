@@ -1,7 +1,8 @@
 return {
-  "akinsho/bufferline.nvim",
-  event = "VeryLazy", -- Load this plugin lazily
+  "akinsho/bufferline.nvim", -- A snazzy bufferline
+  event = { "BufReadPre", "BufNewFile" }, -- Load this plugin when opening a buffer
   dependencies = { "nvim-tree/nvim-web-devicons" }, -- Required for file-type icons
+
   opts = function(_, opts)
     -- Apply Catppuccin-specific highlights if the current colorscheme is "catppuccin"
     if vim.g.colors_name and vim.g.colors_name:find("catppuccin") then
@@ -11,23 +12,27 @@ return {
     -- Override or add custom highlights
     opts.highlights = {
       separator = {
-        fg = "#4c4f69", -- Separator color
-        bg = "#eff1f5", -- Background color
-      },
-      separator_selected = {
-        fg = "#4c4f69", -- Separator color
-        bg = "#eff1f5", -- Background color
-      },
-      background = {
-        fg = "#ccd0da", -- Inactive tab text color
+        fg = "#4c4f69",
         bg = "#eff1f5",
       },
+
+      separator_selected = {
+        fg = "#4c4f69",
+        bg = "#eff1f5",
+      },
+
+      background = {
+        fg = "#ccd0da",
+        bg = "#eff1f5",
+      },
+
       buffer_selected = {
-        fg = "#4c4f69", -- Active tab text color
+        fg = "#4c4f69",
         bg = "#eff1f5",
         bold = true,
         italic = true,
       },
+
       indicator_selected = {
         fg = "#4c4f69",
         bg = "#eff1f5",
@@ -36,14 +41,15 @@ return {
 
     -- Bufferline behavior and appearance settings
     opts.options = {
-      separator_style = { "|", "|" }, -- Style of buffer separators
-      indicator = { style = "none" }, -- Disable tab indicator
-      show_close_icon = false, -- Hide the global close button
-      show_buffer_icons = true, -- Enable file-type icons
-      show_buffer_close_icons = false, -- Hide close button per tab
-      always_show_bufferline = false, -- Hide bufferline if only one tab is open
+      separator_style = { "|", "|" },
+      indicator = { style = "none" },
+      show_close_icon = false,
+      show_buffer_icons = true,
+      show_buffer_close_icons = false,
+      always_show_bufferline = false,
 
-      diagnostics = "nvim_lsp", -- Show LSP diagnostics in bufferline
+      diagnostics = "nvim_lsp",
+
       diagnostics_indicator = function(count, level, diagnostics_dict, context)
         local icons = {
           error = "󰅚", -- Icon for error
@@ -62,7 +68,7 @@ return {
         elseif diagnostics_dict.hint and diagnostics_dict.hint > 0 then
           highest_level = "hint"
         else
-          highest_level = level or "hint" -- Fallback
+          highest_level = level or "hint"
         end
 
         local icon = icons[highest_level]
@@ -72,11 +78,11 @@ return {
 
       offsets = {
         {
-          filetype = "neo-tree", -- Offset section when Neo-tree is open
-          highlight = "Catppuccin", -- Custom highlight colors
-          text = "File Explorer", -- Label for the offset
-          text_align = "center", -- Align text to center
-          separator = true, -- Enable bufferline separator
+          filetype = "neo-tree",
+          highlight = "Catppuccin",
+          text = "File Explorer",
+          text_align = "center",
+          separator = true,
         },
       },
     }

@@ -24,28 +24,35 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup Lazy.nvim with custom configuration
 require("lazy").setup({
   spec = {
-    { import = "plugins" }, -- Load plugins defined in the plugins folder
+    { import = "plugins" },
   },
+
   defaults = {
-    lazy = true, -- Enable lazy loading for all plugins by default
-    version = false, -- Always use the latest commit of each plugin
+    lazy = false,
+    version = false,
   },
-  install = { colorscheme = { "catppuccin" } }, -- Set default colorscheme
+
+  install = { colorscheme = { "catppuccin" } },
+
   checker = {
-    enabled = false, -- Disable automatic update checking
+    enabled = false,
   },
+
   change_detection = {
     enabled = true,
-    notify = false, -- Disable notifications for config changes
+    notify = false,
   },
+
   performance = {
     cache = {
-      enabled = true, -- Enable caching to improve performance
-      gc = 100, -- Trigger garbage collection more aggressively
+      enabled = true,
+      gc = 100,
     },
-    reset_packpath = true, -- Reset 'packpath' to avoid conflicts
+
+    reset_packpath = true,
+
     rtp = {
-      disabled_plugins = { -- Disable unused built-in Vim plugins for performance
+      disabled_plugins = {
         "gzip",
         "tarPlugin",
         "tohtml",
@@ -61,12 +68,14 @@ require("lazy").setup({
       },
     },
   },
+
   ui = {
-    border = "single", -- Use single line borders for Lazy UI
-    title = " Lazy Plugin Manager ", -- Set custom title for Lazy UI
+    border = "single",
+    title = " Lazy Plugin Manager ",
     wrap = true,
     pills = true,
     backdrop = 0,
+
     icons = {
       cmd = " ",
       config = "",
@@ -94,5 +103,5 @@ require("lazy").setup({
       },
     },
   },
-  debug = false, -- Disable Lazy's debug mode for better performance
+  debug = false,
 })

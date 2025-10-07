@@ -1,7 +1,8 @@
 return {
   {
-    "neovim/nvim-lspconfig",
-    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "html", "css", "json" },
+    "neovim/nvim-lspconfig", -- collection of LSP server configurations
+    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact", "lua", "html", "css", "json" }, -- Load this plugin based on filetypes
+
     config = function()
       -- Configuration for TypeScript & JavaScript LSP (using ts_ls because tsserver has issues)
       vim.lsp.config("ts_ls", {
@@ -68,17 +69,17 @@ return {
 
   -- Mason and Mason LSPConfig plugin still uses opts
   {
-    "mason-org/mason.nvim",
-    event = "VimEnter",
+    "mason-org/mason.nvim", -- Easily install and manage LSP servers, DAP servers, linters, and formatters
+    event = "VimEnter", -- Load this plugin when entering Neovim
+
     config = function()
-      -- Setup mason with UI settings and icons
       require("mason").setup({
         ui = {
-          border = "single", -- Set border for Mason UI
+          border = "single",
           icons = {
-            package_installed = "✓", -- Icon for installed packages
-            package_pending = "➜", -- Icon for packages being processed
-            package_uninstalled = "✗", -- Icon for uninstalled packages
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
           },
         },
       })
@@ -98,8 +99,9 @@ return {
   },
 
   {
-    "mason-org/mason-lspconfig.nvim",
-    event = { "BufReadPre", "BufNewFile" },
+    "mason-org/mason-lspconfig.nvim", -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+    event = { "BufReadPre", "BufNewFile" }, -- Load this plugin when opening a buffer
+
     opts = {
       ensure_installed = { "lua_ls", "ts_ls", "eslint", "html", "cssls", "jsonls", "tailwindcss" },
     },

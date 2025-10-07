@@ -1,29 +1,36 @@
 return {
   {
-    "chrisgrieser/nvim-origami",
-    event = { "BufReadPre", "BufNewFile" }, -- Load the plugin before opening a buffer (so folds are available immediately)
+    "chrisgrieser/nvim-origami", -- Collection of quality-of-life features related to folding
+    event = { "BufReadPre", "BufNewFile" }, -- Load this plugin when opening a buffer
+
     opts = {
-      useLspFoldsWithTreesitterFallback = true, -- Prefer LSP folds, fallback to Treesitter if LSP folds are not available
-      pauseFoldsOnSearch = true, -- Temporarily disable folding while searching for better visibility
+      useLspFoldsWithTreesitterFallback = true,
+      pauseFoldsOnSearch = true,
+
       foldtext = {
-        enabled = true, -- Enable custom fold text
-        padding = 1, -- Add padding around the fold text
+        enabled = true,
+        padding = 1,
+
         lineCount = {
-          template = "...", -- Display folded line count, `%d` is replaced by the number
-          hlgroup = "Comment", -- Highlight group for the line count text
+          template = "...",
+          hlgroup = "Comment",
         },
-        diagnosticsCount = false, -- Disable showing diagnostic count in folded lines
-        gitsignsCount = false, -- Disable showing git changes count in folded lines
+
+        diagnosticsCount = false,
+        gitsignsCount = false,
       },
+
       autoFold = {
-        enabled = true, -- Automatically fold certain code sections
-        kinds = { "comment", "imports" }, -- Fold comments and import statements
+        enabled = true,
+        kinds = { "comment", "imports" },
       },
+
       foldKeymaps = {
-        setup = true, -- Enable default keymaps for folds (overrides `h`, `l`, and `$`)
-        hOnlyOpensOnFirstColumn = false, -- Allow `h` to close folds regardless of cursor column
+        setup = true,
+        hOnlyOpensOnFirstColumn = false,
       },
     },
+
     -- Disable vim auto-folding
     init = function()
       vim.opt.foldlevel = 99

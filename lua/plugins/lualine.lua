@@ -1,14 +1,16 @@
 return {
-  "nvim-lualine/lualine.nvim",
-  event = { "BufRead", "BufNewFile" },
+  "nvim-lualine/lualine.nvim", -- A blazing fast and easy to configure neovim statusline
+  event = { "BufReadPre", "BufNewFile" }, -- Load this plugin when opening a buffer
+
   opts = {
     options = {
-      theme = "catppuccin", -- Set the theme to catppuccin
-      icons_enabled = true, -- Enable icons
-      component_separators = { left = "", right = "" }, -- Section separators
-      section_separators = { left = "", right = "" }, -- Section separators
-      globalstatus = true, -- Use global statusline
+      theme = "catppuccin",
+      icons_enabled = true,
+      component_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
+      globalstatus = true,
     },
+
     sections = {
       -- Displays the current mode with a Vim icon
       lualine_a = {
@@ -47,9 +49,9 @@ return {
         {
           "diagnostics",
           sources = { "nvim_diagnostic" },
-          symbols = { error = " ", warn = " ", hint = " ", info = " " }, -- Symbols for each diagnostic level
-          colored = true, -- Enable colored diagnostics
-          update_in_insert = false, -- Disable updates during insert mode
+          symbols = { error = " ", warn = " ", hint = " ", info = " " },
+          colored = true,
+          update_in_insert = false,
         },
       },
 
@@ -60,7 +62,7 @@ return {
       lualine_z = {
         {
           "location",
-          color = { bg = "#4c4f69", fg = "#eff1f5", gui = "bold" }, -- Set color for the location section
+          color = { bg = "#4c4f69", fg = "#eff1f5", gui = "bold" },
         },
       },
     },
