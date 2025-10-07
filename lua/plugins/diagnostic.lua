@@ -32,7 +32,7 @@ return {
           softwrap = 30,
 
           multilines = {
-            enabled = false,
+            enabled = true,
             always_show = false,
             trim_whitespaces = false,
             tabstop = 4,
